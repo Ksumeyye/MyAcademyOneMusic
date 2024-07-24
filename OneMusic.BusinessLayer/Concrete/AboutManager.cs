@@ -18,7 +18,7 @@ namespace OneMusic.BusinessLayer.Concrete
             _aboutDal = aboutDal;
         }
 
-        public List<About> GetList()
+        public List<About> TGetList()
         {
             return _aboutDal.GetList();
         }
@@ -42,6 +42,8 @@ namespace OneMusic.BusinessLayer.Concrete
         {
            _aboutDal.Update(entity); 
         }
+
+        
     }
 }
     
