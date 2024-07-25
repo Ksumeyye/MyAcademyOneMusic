@@ -18,11 +18,6 @@ namespace OneMusic.BusinessLayer.Concrete
             _bannerDal = bannerDal;
         }
 
-        public List<Banner> TGetList()
-        {
-            return _bannerDal.GetList();
-        }
-
         public void TCreate(Banner entity)
         {
             _bannerDal.Create(entity);
@@ -38,11 +33,14 @@ namespace OneMusic.BusinessLayer.Concrete
             return _bannerDal.GetById(id);
         }
 
+        public List<Banner> TGetList()
+        {
+            return _bannerDal.GetList();
+        }
+
         public void TUpdate(Banner entity)
         {
             _bannerDal.Update(entity);
         }
-
-       
     }
 }

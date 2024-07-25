@@ -8,7 +8,7 @@ namespace OneMusic.BusinessLayer.Abstract
 {
     public interface IGenericService<T> where T: class
     {
-        List<T> GetList();
+        List<T> TGetList();
         T TGetById(int id);
         void TCreate(T entity);
         void TUpdate(T entity);

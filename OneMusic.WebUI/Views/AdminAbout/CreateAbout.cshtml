@@ -1,0 +1,20 @@
+﻿@model About
+@{
+    ViewData["Title"] = "CreateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>Yeni Hakkımızda Oluşturma Sayfası</h3>
+
+<form method="post">
+    <label>Resim Url</label>
+    <input type="text" asp-for="ImageUrl" class="form-control"/>
+    <br/>
+    <label>Başlık</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+    <label>Açıklama</label>
+    <textarea type="text" asp-for="Description" class="form-control" rows="4" ></textarea>
+    <br />
+    <button class="btn btn-outline-primary"> Kaydet</button>
+</form>
