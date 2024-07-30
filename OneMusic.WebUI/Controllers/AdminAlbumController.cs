@@ -14,8 +14,8 @@ public AdminAlbumController(IAlbumService albumService)
 
         public IActionResult Index()
         {
-            var values=_albumService.TGetList();
-            return View();
+            var values=_albumService.TGetAlbumsWithSinger();
+            return View(values);
         }
         public IActionResult DeleteAlbum(int id)
         {

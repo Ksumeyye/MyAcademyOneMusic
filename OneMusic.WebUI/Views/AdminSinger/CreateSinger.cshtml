@@ -9,9 +9,11 @@
 <form method="post">
     <label>Resim Url</label>
     <input type="text" class="form-control" asp-for="ImageUrl"/>
+    <span class="text-danger" asp-validation-for="ImageUrl"></span>
     <br>
     <label>Şarkıcı Adı</label>
     <input type="text" class="form-control" asp-for="Name"/>
+    <span class="text-danger" asp-validation-for="Name"></span>
     <br>
     <button class="btn btn-outline-primary">Kaydet</button>
 </form>

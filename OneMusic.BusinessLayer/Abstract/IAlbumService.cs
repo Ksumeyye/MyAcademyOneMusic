@@ -9,5 +9,6 @@ namespace OneMusic.BusinessLayer.Abstract
 {
     public interface IAlbumService : IGenericService<Album>
     {
+        List<Album> TGetAlbumsWithSinger();
     }
 }

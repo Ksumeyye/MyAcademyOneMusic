@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OneMusic.BusinessLayer.Abstract;
+using OneMusic.BusinessLayer.Validators;
 using OneMusic.EntityLayer.Entities;
 
 namespace OneMusic.WebUI.Controllers
@@ -31,8 +32,20 @@ namespace OneMusic.WebUI.Controllers
         [HttpPost]
         public IActionResult CreateSinger(Singer singer) 
         {
-            _singerService.TCreate(singer);
-            return RedirectToAction("Index");
+            var validator = new SingerValidator();
+            ModelState.Clear();
+            var result = validator.Validate(singer);
+            if (result.IsValid)
+            {
+                _singerService.TCreate(singer);
+                return RedirectToAction("Index");
+            }
+            result.Errors.ForEach(x =>
+            {
+                ModelState.AddModelError(x.PropertyName, x.ErrorMessage);
+            });
+            return View();
+           
         }
         [HttpGet]
         public IActionResult UpdateSinger(int id)
