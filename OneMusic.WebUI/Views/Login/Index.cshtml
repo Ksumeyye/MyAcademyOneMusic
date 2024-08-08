@@ -1,0 +1,50 @@
+﻿@model LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>RegistrationForm_v5 by Colorlib</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- MATERIAL DESIGN ICONIC FONT -->
+	<link rel="stylesheet" href="~/colorlib-regform-21/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+	<!-- STYLE CSS -->
+	<link rel="stylesheet" href="~/colorlib-regform-21/css/style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="inner">
+			<form method="post">
+				<h3>OneMusic Giriş Formu</h3>
+			
+				<div class="form-wrapper">
+					<label for="" class="label-input">Kullanıcı Adı</label>
+					<input type="text" asp-for="UserName" class="form-control">
+				</div>
+				<div class="form-wrapper">
+					<label for="" class="label-input">Şifre</label>
+					<input type="password" asp-for="Password" class="form-control">
+				</div>
+				
+				<div style="color:red">
+					@Html.ValidationSummary()
+				</div>
+
+				<button>Giriş Yap</button>
+			</form>
+			<div class="image-holder">
+				<img src="https://r.resimlink.com/yb25JSrX.jpg" style="width:540px;height:460px" alt="">
+			</div>
+		</div>
+	</div>
+
+	<script src="~/colorlib-regform-21/js/jquery-3.3.1.min.js"></script>
+	<script src="~/colorlib-regform-21/js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

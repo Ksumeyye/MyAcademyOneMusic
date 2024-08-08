@@ -33,15 +33,19 @@ namespace OneMusic.WebUI.Controllers
                 Name = model.Name,
                 Surname = model.Surname
             };
-            var result=await _userManager.CreateAsync(user,model.Password);
-            if (result.Succeeded) 
+            if(model.Password==model.ConfirnPassword) 
             {
-            return RedirectToAction("Index","Login");
-            }
-            foreach (var item in result.Errors) 
-            {
-            ModelState.AddModelError("",item.Description);
-            }
+				var result = await _userManager.CreateAsync(user, model.Password);
+				if (result.Succeeded)
+				{
+					return RedirectToAction("Index", "Login");
+				}
+
+				foreach (var item in result.Errors)
+				{
+					ModelState.AddModelError("", item.Description);
+				}
+			}
             return View();
         }
     }

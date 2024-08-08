@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using OneMusic.BusinessLayer.Abstract;
 using OneMusic.EntityLayer.Entities;
 
@@ -7,14 +8,18 @@ namespace OneMusic.WebUI.Controllers
     public class AdminAboutController : Controller
     {
         private readonly IAboutService _aboutService;
+        private readonly UserManager<AppUser> _userManager;
 
-        public AdminAboutController(IAboutService aboutService)
+        public AdminAboutController(IAboutService aboutService, UserManager<AppUser> userManager)
         {
             _aboutService = aboutService;
+            _userManager = userManager;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            TempData["username"] = user.Name + " " + user.Surname;
             var values = _aboutService.TGetList();
             return View(values);
         }
