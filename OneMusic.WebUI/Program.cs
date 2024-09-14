@@ -50,6 +50,7 @@ builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Login/Index";
     options.AccessDeniedPath = "/ErrorPage/AccessDenied";
+    options.LogoutPath= "/Login/Logout";
 });
 
 var app = builder.Build();
