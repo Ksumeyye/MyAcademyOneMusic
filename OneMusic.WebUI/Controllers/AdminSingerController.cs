@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using OneMusic.BusinessLayer.Abstract;
 using OneMusic.BusinessLayer.Validators;
 using OneMusic.EntityLayer.Entities;
 
 namespace OneMusic.WebUI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminSingerController : Controller
     {
         private readonly ISingerService _singerService;

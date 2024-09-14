@@ -19,10 +19,15 @@ namespace OneMusic.DataAccessLayer.Concrete
             _context = context;
         }
 
-        public List<Album> GetAlbumsWithSinger()
+        public List<Album> GetAlbumsByArtist(int id)
         {
-            return _context.Albums.Include(x=>x.Singer).ToList();
+            return _context.Albums.Include(y => y.AppUser).Include(a => a.Songs).Where(x => x.AppUserId == id).ToList();
         }
+
+        public List<Album> GetAlbumsWithArtist()
+        {
+            return _context.Albums.Include(x => x.AppUser).Include(a => a.Songs).ToList();
+        }
+
     }
 }
-

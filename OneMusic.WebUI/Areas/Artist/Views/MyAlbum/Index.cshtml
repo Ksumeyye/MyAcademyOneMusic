@@ -1,0 +1,61 @@
+﻿@model List<Album>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Artist/Views/ArtistLayout/Index.cshtml";
+}
+
+<h3>Albümlerim</h3>
+@{
+    int count = 0;
+}
+<table class="table table-bordered table-hover">
+
+    <tr>
+        <th>#</th>
+        <th>Resim</th>
+        <th>Albüm Adı</th>
+        <th>Şarkıcı</th>
+        <th>Fiyat</th>
+        <th>İşlemler</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td><img src="@item.CoverImage" style="height:75px;width:75px" /></td>
+            <td>@item.AlbumName</td>
+            <td>@item.Singer.Name</td>
+            <td>@item.Price ₺</td>
+            <td>
+                <button class="btn btn-outline-danger" onclick="deleteAlbum(@item.AlbumId)">Sil</button>
+                <a class="btn btn-outline-info" asp-action="UpdateAlbum" asp-route-id="@item.AlbumId">Güncelle</a>
+            </td>
+        </tr>
+
+    }
+
+</table>
+<a class="btn btn-outline-primary" asp-action="CreateAlbum">Yeni Albüm Ekle</a>
+
+<script>
+    function deleteAlbum() {
+        Swal.fire({
+            title: "Silmek İstediğinize Emin Misiniz?",
+            text: "Silerseniz Bu İşlemi Geri Alamazsınız!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Evet, Sil!",
+            cancelButtonText: "İptal"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "/AdminAlbum/DeleteAlbum/" + id;
+            }
+        });
+
+    }
+</script>
+

@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using OneMusic.BusinessLayer.Abstract;
 using OneMusic.EntityLayer.Entities;
 
 namespace OneMusic.WebUI.Controllers
 {
+    [Authorize(Roles ="Admin")]
     public class AdminAboutController : Controller
     {
         private readonly IAboutService _aboutService;

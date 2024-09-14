@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using OneMusic.BusinessLayer.Abstract;
 using OneMusic.EntityLayer.Entities;
 
 namespace OneMusic.WebUI.Controllers
 {
+    [Authorize(Roles ="Admin")]
     public class AdminAlbumController : Controller
     {
         private readonly IAlbumService _albumService;
@@ -14,7 +16,7 @@ public AdminAlbumController(IAlbumService albumService)
 
         public IActionResult Index()
         {
-            var values=_albumService.TGetAlbumsWithSinger();
+            var values=_albumService.TGetAlbumsWithArtist();
             return View(values);
         }
         public IActionResult DeleteAlbum(int id)

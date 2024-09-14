@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using OneMusic.EntityLayer.Entities;
 
 namespace OneMusic.WebUI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ArtistsController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
