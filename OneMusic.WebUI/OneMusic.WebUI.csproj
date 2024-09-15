@@ -22,7 +22,7 @@
 
   <ItemGroup>
     <Folder Include="Areas\Artist\Data\" />
-    <Folder Include="Areas\Artist\Models\" />
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
 </Project>

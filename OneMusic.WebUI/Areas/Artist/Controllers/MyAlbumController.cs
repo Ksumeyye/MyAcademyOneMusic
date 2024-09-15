@@ -32,5 +32,24 @@ namespace OneMusic.WebUI.Areas.Artist.Controllers
             _albumService.TCreate(album);
             return RedirectToAction("Index");
         }
+        public IActionResult DeleteAlbum(int id)
+        {
+            _albumService.TDelete(id);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public async Task<IActionResult> UpdateAlbum(int id)
+        {
+            var values=_albumService.TGetById(id);
+            return View(values);
+        }
+        [HttpPost]
+        public async Task<IActionResult> UpdateAlbum(Album album)
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            album.AppUserId = user.Id;
+            _albumService.TUpdate(album);
+            return RedirectToAction("Index");
+        }
     }
 }

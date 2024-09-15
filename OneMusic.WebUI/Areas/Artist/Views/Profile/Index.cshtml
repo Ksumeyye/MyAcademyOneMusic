@@ -1,0 +1,38 @@
+﻿@model ArtistEditViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Artist/Views/ArtistLayout/Index.cshtml";
+}
+
+<h3>Profil Bilgileri Güncelleme Sayfası</h3>
+<form method="post" enctype="multipart/form-data">
+<label>Ad</label>
+<input type="text" asp-for="Name" class="form-control" required/>
+<br/>
+    <label>Soyad</label>
+    <input type="text" asp-for="Surname" class="form-control" required />
+    <br />
+    <label>Kullanıcı Adı</label>
+    <input type="text" asp-for="UserName" class="form-control" required/>
+    <br />
+    <label>Email</label>
+    <input type="email" asp-for="Email" class="form-control" required/>
+    <br />
+    <label>Telefon No</label>
+    <input type="text" asp-for="PhoneNumber" class="form-control" />
+    <br />
+    <label>Profil Resmi</label>
+    <input type="file" asp-for="ImageFile" class="form-control" required/>
+    <br />
+    <label>Mevcut Şifreniz</label>
+    <input type="password" asp-for="OldPassword" class="form-control" required />
+    <br />
+    <label>Yeni Şifreniz</label>
+    <input type="password" asp-for="NewPassword" class="form-control" />
+    <br />
+    <label>Yeni Şifre Tekrar</label>
+    <input type="password" asp-for="ConfirmPassword" class="form-control" />
+    <br />
+    <p style="color:red">@Html.ValidationSummary()</p>
+    <button class="btn btn-primary">Bilgileri Güncelle</button>
+</form>

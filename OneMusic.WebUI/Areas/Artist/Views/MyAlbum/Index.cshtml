@@ -27,7 +27,7 @@
             <td>@item.AlbumName</td>
             <td>@item.Price ₺</td>
             <td>
-                <button class="btn btn-outline-danger" onclick="deleteAlbum(@item.AlbumId)">Sil</button>
+                <button class="btn btn-outline-danger" onclick="deleteMyAlbum(@item.AlbumId)">Sil</button>
                 <a class="btn btn-outline-info" asp-action="UpdateAlbum" asp-route-id="@item.AlbumId">Güncelle</a>
             </td>
         </tr>
@@ -38,7 +38,7 @@
 <a class="btn btn-outline-primary" asp-action="CreateAlbum">Yeni Albüm Ekle</a>
 
 <script>
-    function deleteAlbum() {
+    function deleteMyAlbum(id) {
         Swal.fire({
             title: "Silmek İstediğinize Emin Misiniz?",
             text: "Silerseniz Bu İşlemi Geri Alamazsınız!",
@@ -50,7 +50,7 @@
             cancelButtonText: "İptal"
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = "/AdminAlbum/DeleteAlbum/" + id;
+                window.location.href = "/Artist/MyAlbum/DeleteAlbum/" + id;
             }
         });
 
