@@ -12,8 +12,6 @@ namespace OneMusic.EntityLayer.Entities
         public string AlbumName { get; set; }
         public string CoverImage { get; set; }
         public decimal Price { get; set; }
-        public int SingerId { get; set; }
-        public Singer Singer { get; set; }
         public int? AppUserId { get; set; }
         public AppUser AppUser { get; set; }
         public List <Song>Songs{ get; set; }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OneMusic.DataAccessLayer.Context;
 
@@ -11,9 +12,11 @@ using OneMusic.DataAccessLayer.Context;
 namespace OneMusic.DataAccessLayer.Migrations
 {
     [DbContext(typeof(OneMusicContext))]
-    partial class OneMusicContextModelSnapshot : ModelSnapshot
+    [Migration("20240915071211_mig_remove_relation_singer_album")]
+    partial class mig_remove_relation_singer_album
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
