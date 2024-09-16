@@ -25,4 +25,27 @@
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\03465f23f19c9b31771cc8acec61089cccc1845c\style.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\03465f23f19c9b31771cc8acec61089cccc1845c\_fonts.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\03465f23f19c9b31771cc8acec61089cccc1845c\_mixin.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\03465f23f19c9b31771cc8acec61089cccc1845c\_responsive.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\03465f23f19c9b31771cc8acec61089cccc1845c\_theme_color.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\9568d30ed5d2cebc2ad5df4154c8df8099b75c0b\style.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\9568d30ed5d2cebc2ad5df4154c8df8099b75c0b\_mixin.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\9568d30ed5d2cebc2ad5df4154c8df8099b75c0b\_responsive.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\9568d30ed5d2cebc2ad5df4154c8df8099b75c0b\_theme_color.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\9568d30ed5d2cebc2ad5df4154c8df8099b75c0b\_variables.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\b687762b7660b1f71ae40e600add14c590cfdbc7\style.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\b687762b7660b1f71ae40e600add14c590cfdbc7\_mixin.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\b687762b7660b1f71ae40e600add14c590cfdbc7\_responsive.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\b687762b7660b1f71ae40e600add14c590cfdbc7\_theme_color.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\b687762b7660b1f71ae40e600add14c590cfdbc7\_variables.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\d85c8cf619ac1df897d554b9bf37f413df87287f\style.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\d85c8cf619ac1df897d554b9bf37f413df87287f\_fonts.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\d85c8cf619ac1df897d554b9bf37f413df87287f\_mixin.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\d85c8cf619ac1df897d554b9bf37f413df87287f\_responsive.scssc" />
+    <None Include="wwwroot\one-music-gh-pages\.sass-cache\d85c8cf619ac1df897d554b9bf37f413df87287f\_theme_color.scssc" />
+  </ItemGroup>
+
 </Project>
