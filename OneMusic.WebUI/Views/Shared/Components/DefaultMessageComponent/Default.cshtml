@@ -1,0 +1,47 @@
+﻿@model Message
+<section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/bg-img/bg-2.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading white wow fadeInUp" data-wow-delay="100ms">
+                    <h2>Bizimle İletişime Geçiniz</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <!-- Contact Form Area -->
+                <div class="contact-form-area">
+                    <form asp-action="SendMessage" asp-controller="Default" method="post">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="form-group wow fadeInUp" data-wow-delay="100ms">
+                                    <input type="text" class="form-control" asp-for="Name" placeholder="Adınız Soyadınız">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="form-group wow fadeInUp" data-wow-delay="200ms">
+                                    <input type="email" class="form-control" asp-for="Email" placeholder="E-mail">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group wow fadeInUp" data-wow-delay="300ms">
+                                    <input type="text" class="form-control" asp-for="Subject" placeholder="Konu">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group wow fadeInUp" data-wow-delay="400ms">
+                                    <textarea name="message" class="form-control" asp-for="Content" cols="30" rows="10" placeholder="Mesajınızı buraya yazınız."></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center wow fadeInUp" data-wow-delay="500ms">
+                                <button class="btn oneMusic-btn mt-30" type="submit">Mesajı Gönder <i class="fa fa-angle-double-right"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

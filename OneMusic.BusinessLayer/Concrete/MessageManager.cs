@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace OneMusic.BusinessLayer.Concrete
 {
-    public class MessageManager : IMessageService
+    public class MessageManager : IMessageService //IMessageService'dan miras alıyor.
     {
         private readonly IMessageDal _messageDal;
 
