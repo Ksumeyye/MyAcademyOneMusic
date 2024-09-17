@@ -1,5 +1,5 @@
 ﻿@model Message
-<section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/bg-img/bg-2.jpg);">
+<section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(/one-music-gh-pages/img/bg-img/bg-2.jpg);">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -32,11 +32,11 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-group wow fadeInUp" data-wow-delay="400ms">
-                                    <textarea name="message" class="form-control" asp-for="Content" cols="30" rows="10" placeholder="Mesajınızı buraya yazınız."></textarea>
+                                    <textarea class="form-control" asp-for="Content" cols="30" rows="10" placeholder="Mesajınızı buraya yazınız."></textarea>
                                 </div>
                             </div>
                             <div class="col-12 text-center wow fadeInUp" data-wow-delay="500ms">
-                                <button class="btn oneMusic-btn mt-30" type="submit">Mesajı Gönder <i class="fa fa-angle-double-right"></i></button>
+                                <button class="btn oneMusic-btn mt-30" type="submit" onclick="sendMessage()"> Mesajı Gönder <i class="fa fa-angle-double-right"></i></button>
                             </div>
                         </div>
                     </form>
@@ -45,3 +45,23 @@
         </div>
     </div>
 </section>
+
+<script>
+    function sendMessage() {
+        Swal.fire({
+            title: "Tebrikler",
+            text: "Mesajınız Gönderildi!",
+            icon: "success",
+            showCancelButton: false,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Tamam",
+            cancelButtonText: "İptal"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "/Default/Index/";
+            }
+        });
+
+    }
+</script>

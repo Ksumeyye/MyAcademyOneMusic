@@ -14,7 +14,7 @@ namespace OneMusic.WebUI.Controllers
         public IActionResult SendMessage(Message message)
         {
             _messageService.TCreate(message);
-            return RedirectToAction("Index");
+            return NoContent();
         }
     }
 }

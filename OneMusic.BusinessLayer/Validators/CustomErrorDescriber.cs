@@ -27,11 +27,11 @@ namespace OneMusic.BusinessLayer.Validators
 		{
 			return new IdentityError
 			{
-				Description="Şifre En Az Bir Küçük Harf (a-z) İçermelidir."
+				Description = "Şifre En Az Bir Küçük Harf (a-z) İçermelidir."
 			};
 
 		}
-		public override IdentityError PasswordRequiresUpper() 
+		public override IdentityError PasswordRequiresUpper()
 		{
 			return new IdentityError
 			{
@@ -42,7 +42,21 @@ namespace OneMusic.BusinessLayer.Validators
 		{
 			return new IdentityError
 			{
-				Description=" Şifre En Az Bir Özel Karakter (*,-,_,+...) İçermelidir."
+				Description = " Şifre En Az Bir Özel Karakter (*,-,_,+...) İçermelidir."
+			};
+		}
+		public override IdentityError InvalidUserName(string? userName)
+		{
+			return new IdentityError
+			{
+				Description = "Bu kullanıcı adını kullanamazsınız"
+			};
+		}
+		public override IdentityError DuplicateUserName(string userName)
+		{
+			return new IdentityError
+			{
+				Description = "Bu kullanıcı adı daha önce alınmıştır."
 			};
 		}
 	}

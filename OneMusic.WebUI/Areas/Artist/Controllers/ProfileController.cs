@@ -35,11 +35,19 @@ namespace OneMusic.WebUI.Areas.Artist.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(ArtistEditViewModel model)
         {
+            ModelState.Clear();
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
             if(model.ImageFile != null) 
             {
                 var resource=Directory.GetCurrentDirectory();
-                var extension=Path.GetExtension(model.ImageFile.FileName);
+                var extension=Path.GetExtension(model.ImageFile.FileName).ToLower();
+                if(extension !=".jpg" && extension !=".jpeg" && extension !=".png")
+                {
+                    //Desteklenmeyen dosya uzantısı hatası
+                    ModelState.AddModelError("ImageFile", "Sadece resim dosyaları kabul edilir.");
+                    //Gerekirse, işlemi sonlandırabilirsiniz.
+                    return View(model);
+                }
                 var imageName=Guid.NewGuid() + extension;
                 var saveLocation = resource + "/wwwroot/images/" + imageName;
                 var stream = new FileStream(saveLocation, FileMode.Create);

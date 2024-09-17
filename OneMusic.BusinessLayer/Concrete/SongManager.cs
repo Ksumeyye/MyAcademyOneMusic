@@ -11,36 +11,36 @@ namespace OneMusic.BusinessLayer.Concrete
 {
     public class SongManager : ISongService
     {
-        private readonly ISongDal _sondDal;
+        private readonly ISongDal _songDal;
 
         public SongManager(ISongDal sondDal)
         {
-            _sondDal = sondDal;
+            _songDal = sondDal;
         }
 
         public void TCreate(Song entity)
         {
-            _sondDal.Create(entity);
+            _songDal.Create(entity);
         }
 
         public void TDelete(int id)
         {
-            _sondDal.Delete(id);
+            _songDal.Delete(id);
         }
 
         public Song TGetById(int id)
         {
-            return _sondDal.GetById(id);
+            return _songDal.GetById(id);
         }
 
         public List<Song> TGetList()
         {
-            return _sondDal.GetList();
+            return _songDal.GetList();
         }
 
         public void TUpdate(Song entity)
         {
-           _sondDal.Update(entity);
+           _songDal.Update(entity);
         }
     }
 }

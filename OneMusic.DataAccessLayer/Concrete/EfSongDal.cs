@@ -12,8 +12,14 @@ namespace OneMusic.DataAccessLayer.Concrete
 {
     public class EfSongDal : GenericRepository<Song>, ISongDal
     {
+        private readonly OneMusicContext _context;
         public EfSongDal(OneMusicContext context) : base(context)
         {
+        }
+
+        public List<Song> GetSongsWithAlbumAndArtist()
+        {
+            throw new NotImplementedException();
         }
     }
 }
