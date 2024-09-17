@@ -1,4 +1,4 @@
-﻿Şarkı dosyadan eklenecek artist tarafında
+﻿---Şarkı dosyadan eklenecek artist tarafında
 albüme ve sanatçıya göre şarkıların getirileceği alan
 album/Index içinde dropdown ile filtreleme yaparak albümleri getirme
-Dropdown selectListItem yöntemi tag helper ile anlatılacak.
+---Dropdown selectListItem yöntemi tag helper ile anlatılacak.

@@ -1,8 +1,20 @@
-﻿
+﻿@model SongViewModel
 @{
     ViewData["Title"] = "CreateSong";
     Layout = "~/Areas/Artist/Views/ArtistLayout/Index.cshtml";
 }
 
-<h1>CreateSong</h1>
-
+<h3>Yeni Şarkı Oluştur</h3>
+<form method="post" enctype="multipart/form-data">
+    <label>Şarkı Adı</label>
+    <input type="text" asp-for="SongName" class="form-control"/>
+    <br />
+    <label>Albüm Seçin</label>
+    <select asp-for="AlbumId" asp-items="@ViewBag.albums" class="form-control">
+        <option>Albümü Seçin</option>
+    </select>
+    <br />
+    <label>Şarkıyı Seçin</label>
+    <input type="file" asp-for="SongFile" class="form-control"/>
+    <button class="btn btn-outline-primary">Kaydet</button>
+</form>

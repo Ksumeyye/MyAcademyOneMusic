@@ -165,6 +165,9 @@ namespace OneMusic.DataAccessLayer.Migrations
                     b.Property<int?>("AppUserId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("int");
+
                     b.Property<string>("CoverImage")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -175,6 +178,8 @@ namespace OneMusic.DataAccessLayer.Migrations
                     b.HasKey("AlbumId");
 
                     b.HasIndex("AppUserId");
+
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("Albums");
                 });
@@ -311,6 +316,23 @@ namespace OneMusic.DataAccessLayer.Migrations
                     b.HasKey("BannerId");
 
                     b.ToTable("Banners");
+                });
+
+            modelBuilder.Entity("OneMusic.EntityLayer.Entities.Category", b =>
+                {
+                    b.Property<int>("CategoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"));
+
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CategoryId");
+
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("OneMusic.EntityLayer.Entities.Contact", b =>
@@ -475,7 +497,13 @@ namespace OneMusic.DataAccessLayer.Migrations
                         .WithMany("Albums")
                         .HasForeignKey("AppUserId");
 
+                    b.HasOne("OneMusic.EntityLayer.Entities.Category", "Category")
+                        .WithMany("Albums")
+                        .HasForeignKey("CategoryId");
+
                     b.Navigation("AppUser");
+
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("OneMusic.EntityLayer.Entities.Song", b =>
@@ -495,6 +523,11 @@ namespace OneMusic.DataAccessLayer.Migrations
                 });
 
             modelBuilder.Entity("OneMusic.EntityLayer.Entities.AppUser", b =>
+                {
+                    b.Navigation("Albums");
+                });
+
+            modelBuilder.Entity("OneMusic.EntityLayer.Entities.Category", b =>
                 {
                     b.Navigation("Albums");
                 });
