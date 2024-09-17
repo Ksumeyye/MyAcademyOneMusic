@@ -1,0 +1,57 @@
+﻿@model List<Song>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Artist/Views/ArtistLayout/Index.cshtml";
+}
+
+<h3>Şarkılarım</h3>
+@{
+    int count = 0;
+}
+<table class="table table-bordered table-hover">
+
+    <tr>
+        <th>#</th>
+        <th>Şarkı Adı</th>
+        <th>Albüm Adı</th>
+        <th>İşlemler</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td>@item.SongName</td>
+            <td>@item.Album.AlbumName</td>
+            
+            <td>
+                <button class="btn btn-outline-danger" onclick="deleteMySong(@item.SongId)">Sil</button>
+                <a class="btn btn-outline-info" asp-action="UpdateSong" asp-route-id="@item.SongId">Güncelle</a>
+            </td>
+        </tr>
+
+    }
+
+</table>
+<a class="btn btn-outline-primary" asp-action="CreateSong">Yeni Şarkı Oluştur</a>
+
+<script>
+    function deleteMySong(id) {
+        Swal.fire({
+            title: "Silmek İstediğinize Emin Misiniz?",
+            text: "Silerseniz Bu İşlemi Geri Alamazsınız!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Evet, Sil!",
+            cancelButtonText: "İptal"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "/Artist/MySong/DeleteSong/" + id;
+            }
+        });
+
+    }
+</script>
