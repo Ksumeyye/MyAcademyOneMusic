@@ -37,6 +37,9 @@ builder.Services.AddScoped<ISingerService,SingerManager>();
 builder.Services.AddScoped<ISongDal,EfSongDal>();
 builder.Services.AddScoped<ISongService,SongManager>();
 
+builder.Services.AddScoped<ICategoryDal,EfCategoryDal>();
+builder.Services.AddScoped<ICategoryService,CategoryManager>();
+
 builder.Services.AddValidatorsFromAssemblyContaining<SingerValidator>();
 
 builder.Services.AddDbContext<OneMusicContext>();

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using OneMusic.BusinessLayer.Abstract;
+using OneMusic.DataAccessLayer.Context;
 using OneMusic.EntityLayer.Entities;
 using OneMusic.WebUI.Areas.Artist.Models;
 
@@ -16,17 +17,20 @@ namespace OneMusic.WebUI.Areas.Artist.Controllers
         private readonly ISongService _songService;
         private readonly UserManager<AppUser> _userManager;
         private readonly IAlbumService _albumService;
-        public MySongController(ISongService songService, UserManager<AppUser> userManager, IAlbumService albumService)
+        private readonly OneMusicContext _oneMusicContext;
+        public MySongController(ISongService songService, UserManager<AppUser> userManager, IAlbumService albumService, OneMusicContext oneMusicContext)
         {
             _songService = songService;
             _userManager = userManager;
             _albumService = albumService;
+            _oneMusicContext = oneMusicContext;
         }
 
         public async Task <IActionResult> Index()
         {
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
-            var values = _songService.TGetSongswithAlbumByUserId(user.Id);
+            var userid = user.Id;
+            var values = _songService.TGetSongswithAlbumByUserId(userid).ToList();
             return View(values);
         }
         [HttpGet]

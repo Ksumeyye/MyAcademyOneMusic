@@ -33,9 +33,14 @@ namespace OneMusic.BusinessLayer.Concrete
             return _albumDal.GetAlbumsByArtist(id);
         }
 
-        public List<Album> TGetAlbumsWithArtist()
+        public List<Album> TGetAlbumswithArtist()
         {
-            return _albumDal.GetAlbumsWithArtist();
+            return _albumDal.GetAlbumswithArtist();
+        }
+
+        public string? TGetAlbumsWithArtist()
+        {
+            throw new NotImplementedException();
         }
 
         public Album TGetById(int id)
@@ -47,7 +52,6 @@ namespace OneMusic.BusinessLayer.Concrete
         {
             return _albumDal.GetList();
         }
-
 
         public void TUpdate(Album entity)
         {

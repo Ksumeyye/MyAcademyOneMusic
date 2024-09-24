@@ -21,7 +21,7 @@
             <td>@item.Name @item.Surname</td>
             <td>
                 <a href="/Artists/DeleteArtist/@item.Id" class="btn btn-outline-danger">Sil</a>
-                <a href="#" class="btn btn-outline-info"> Albümlerini Gör</a>
+                <a href="/AdminAlbum/AlbumsByArtist?artistId=@item.Id" class="btn btn-outline-info"> Albümlerini Gör</a>
             </td>
         </tr>
 

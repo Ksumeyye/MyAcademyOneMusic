@@ -28,7 +28,7 @@ namespace OneMusic.WebUI.Areas.Artist.Controllers
                 Name = user.Name,
                 Surname = user.Surname,
                 ImageUrl = user.ImageUrl,
-                UserName = user.UserName,
+                UserName = user.UserName
             };
             return View(model);
         }
@@ -39,8 +39,8 @@ namespace OneMusic.WebUI.Areas.Artist.Controllers
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
             if(model.ImageFile != null) 
             {
-                var resource=Directory.GetCurrentDirectory();
-                var extension=Path.GetExtension(model.ImageFile.FileName).ToLower();
+                var resource=Directory.GetCurrentDirectory(); //Projenin bulundugu dosya yolunu bul
+                var extension=Path.GetExtension(model.ImageFile.FileName).ToLower(); //Dosyanın uzantısını alır
                 if(extension !=".jpg" && extension !=".jpeg" && extension !=".png")
                 {
                     //Desteklenmeyen dosya uzantısı hatası

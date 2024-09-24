@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OneMusic.EntityLayer.Entities
 {
-    public class AppUser: IdentityUser<int>
+    public class AppUser: IdentityUser<int> //int: primary key degeri
     {
         public string Name { get; set; }
         public string Surname { get; set; }

@@ -7,12 +7,7 @@ using System.Threading.Tasks;
 
 namespace OneMusic.BusinessLayer.Abstract
 {
-    public interface IAlbumService : IGenericService<Album>
+    public interface ICategoryService:IGenericService<Category>
     {
-
-        List<Album> TGetAlbumsByArtist(int id);
-
-        public List<Album> TGetAlbumswithArtist();
-        string? TGetAlbumsWithArtist();
     }
 }

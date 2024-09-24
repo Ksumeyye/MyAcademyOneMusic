@@ -1,0 +1,17 @@
+﻿﻿<form method="post" asp-action="FilterAlbums" asp-controller="Albums">
+    <div class="row col-12">
+        <div class="form-group col-3">
+            <select asp-items="@ViewBag.artists" name="artist">
+                <option>Sanatçı Seçin</option>
+            </select>
+        </div>
+        <div class="form-group col-3">
+            <select asp-items="@ViewBag.categories" name="category">
+                <option>Tür Seçin</option>
+            </select>
+        </div>
+        <div class="form-group col-3">
+            <button class="btn btn-sm">Ara</button>
+        </div>
+    </div>
+</form>
