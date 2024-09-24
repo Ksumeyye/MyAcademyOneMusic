@@ -2,3 +2,14 @@
 albüme ve sanatçıya göre şarkıların getirileceği alan
 album/Index içinde dropdown ile filtreleme yaparak albümleri getirme
 ---Dropdown selectListItem yöntemi tag helper ile anlatılacak.
+
+Ana sayfada albüme tıklandığında bu albüme ait şarkıların olacağı bir alan
+En son eklenen parça, o parça hangi albüme aitse kapak fotoğrafı göstermeli
+Popular artıst kısmına son eklenen 7 tane sanatçı eklenmeli
+New Hits kısmına son eklenen 7 şarkı
+This Week's Top kısmına son eklenen 6 albüm eklenmeli
+Events "isteyen" Etkinlikler Kısmı Yapılabilinir
+Contact kısmı yapılacak
+Login/Register kısımları yapılacak.
+Admin tüm paneli görecek
+Sanatçı kendi albümlerini görecek albüm ve şarkılarını eklicek
