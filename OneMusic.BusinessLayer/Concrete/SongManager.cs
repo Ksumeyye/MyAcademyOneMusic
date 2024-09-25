@@ -37,7 +37,10 @@ namespace OneMusic.BusinessLayer.Concrete
         {
             return _songDal.GetList();
         }
-
+        public List<Song> TGetSongsByAlbumId(int id)
+        {
+            return _songDal.GetSongsByAlbumId(id);
+        }
         public List<Song> TGetSongsWithAlbumAndArtist()
         {
             return _songDal.GetSongsWithAlbumAndArtist();
@@ -47,7 +50,10 @@ namespace OneMusic.BusinessLayer.Concrete
         {
             return _songDal.GetSongswithAlbumByUserId(id);
         }
-
+        public List<Song> TGetSongWithAlbum()
+        {
+            return _songDal.GetSongWithAlbum();
+        }
         public void TUpdate(Song entity)
         {
            _songDal.Update(entity);
