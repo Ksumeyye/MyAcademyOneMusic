@@ -6,7 +6,7 @@ namespace OneMusic.WebUI.ViewComponents.Default_Index
     {
             public IViewComponentResult Invoke()
             {
-            var values = albumService.TGetAlbumsWithArtist();
+            var values = albumService.TGetAlbumswithArtist();
                 return View(values);
             }
     }

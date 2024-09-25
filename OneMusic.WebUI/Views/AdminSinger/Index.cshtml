@@ -1,4 +1,4 @@
-﻿@model List<Singer>
+﻿@model List<AppUser>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
@@ -25,8 +25,8 @@
             <td><img src="@item.ImageUrl" style="height:75px;width:75px" /></td>
             <td>@item.Name</td>
             <td>
-                <button class="btn btn-outline-danger" onclick="deleteSinger(@item.SingerId)">Sil</button>
-                <a class="btn btn-outline-info" asp-action="UpdateSinger" asp-route-id="@item.SingerId">Güncelle</a>
+                <button class="btn btn-outline-danger" onclick="deleteSinger()">Sil</button>
+                <a class="btn btn-outline-info" asp-action="UpdateSinger" asp-route-id="">Güncelle</a>
             </td>
         </tr>
 
@@ -36,7 +36,7 @@
 <a class="btn btn-outline-primary" asp-action="CreateSinger">Yeni Şarkıcı Oluştur</a>
 
 <script>
-    function deleteSinger() 
+    function deleteSinger(id) 
     {
         Swal.fire({
             title: "Silmek İstediğinize Emin Misiniz?",

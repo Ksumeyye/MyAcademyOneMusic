@@ -47,33 +47,132 @@ namespace OneMusic.WebUI.Areas.Artist.Controllers
             return View();
         }
         [HttpPost]
-        public async Task <IActionResult> CreateSong(SongViewModel model)
+        public async Task <IActionResult> CreateSong(SongViewModel s)
         {
-            var song = new Song
-            {
-                SongName = model.SongName,
-                AlbumId = model.AlbumId,
-            };
-
-            if(model.SongFile != null) 
+            if(s.SongImageUrl != null && s.SongFile !=null)
             {
                 var resource = Directory.GetCurrentDirectory();
-                var extension = Path.GetExtension(model.SongFile.FileName).ToLower();
-                if (extension != ".mp3")
+                var extension = Path.GetExtension(s.SongImageUrl.FileName);
+                var imagename= ($"{Guid.NewGuid()}{extension}");
+                var savelocation = ($"{resource}/wwwroot/images/{imagename}");
+                var stream = new FileStream(savelocation, FileMode.Create);
+                await s.SongImageUrl.CopyToAsync(stream);
+
+                var resource1 = Directory.GetCurrentDirectory();
+                var extension1 = Path.GetExtension(s.SongFile.FileName);
+                var songname = ($"{Guid.NewGuid()}{extension1}");
+                var savelocation1 = ($"{resource1}/wwwroot/songs/{songname}");
+                var stream1 = new FileStream(savelocation1, FileMode.Create);
+                await s.SongFile.CopyToAsync(stream1);
+
+                Song son = new Song()
                 {
-                    //Desteklenmeyen dosya uzantısı hatası
-                    ModelState.AddModelError("SongFile", "Sadece mp3 dosyaları kabul edilir.");
-                    //Gerekirse, işlemi sonlandırabilirsiniz.
-                    return View(model);
-                }
-                var songName = Guid.NewGuid() + extension;
-                var saveLocation = resource + "/wwwroot/songs/" + songName;
-                var stream = new FileStream(saveLocation, FileMode.Create);
-                await model.SongFile.CopyToAsync(stream);
-                song.SongUrl = "/songs/" + songName;
+                    SongName = s.SongName,
+                    SongImageUrl = imagename,
+                    SongUrl = songname,
+                    AlbumId = s.AlbumId
+
+                };
+
+                _songService.TCreate(son);
+                return RedirectToAction("Index");
+
             }
-            _songService.TCreate(song);
+
+            return View();
+        }
+
+        public IActionResult DeleteSong(int id)
+        {
+            _songService.TDelete(id);
             return RedirectToAction("Index");
+        }
+
+
+
+        [HttpGet]
+        public IActionResult UpdateSong(int id)
+        {
+            var values = _songService.TGetById(id);
+
+            List<SelectListItem> list = (from x in _oneMusicContext.Albums.ToList()
+                                         select new SelectListItem
+                                         {
+                                             Text = x.AlbumName,
+                                             Value = x.AlbumId.ToString()
+                                         }).ToList();
+
+            ViewBag.Albums = list;
+
+            var model = new SongUpdateViewModel()
+            {
+                Id = values.SongId,
+                ImageUrl = values.SongImageUrl,
+                SongFileUrl = values.SongUrl,
+                SongName = values.SongName,
+                AlbumId = values.AlbumId
+
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateSong(SongUpdateViewModel s)
+        {
+            if (s.SongFileUrl != null || s.ImageUrl != null)
+            {
+                // Mevcut kaydı bul
+                var existingSong = _songService.TGetById(s.Id);
+
+                // Eğer mevcut kayıt null değilse, güncelleme işlemini gerçekleştir
+                if (existingSong != null)
+                {
+                    if (s.SongImageUrl != null)
+                    {
+                        var resource2 = Directory.GetCurrentDirectory();
+                        var extension2 = Path.GetExtension(s.SongImageUrl.FileName);
+                        var imagename2 = ($"{Guid.NewGuid()}{extension2}");
+                        var savelocation2 = ($"{resource2}/wwwroot/images/{imagename2}");
+                        var stream2 = new FileStream(savelocation2, FileMode.Create);
+                        await s.SongImageUrl.CopyToAsync(stream2);
+                        // Mevcut kaydı güncelle
+                        existingSong.SongName = s.SongName;
+                        existingSong.SongImageUrl = imagename2;
+                        existingSong.AlbumId = s.AlbumId;
+                    }
+                    else if (s.SongFile != null)
+                    {
+                        var resource3 = Directory.GetCurrentDirectory();
+                        var extension3 = Path.GetExtension(s.SongFile.FileName);
+                        var songname3 = ($"{Guid.NewGuid()}{extension3}");
+                        var savelocation3 = ($"{resource3}/wwwroot/audio/{songname3}");
+                        var stream3 = new FileStream(savelocation3, FileMode.Create);
+                        await s.SongFile.CopyToAsync(stream3);
+                        // Mevcut kaydı güncelle
+                        existingSong.SongName = s.SongName;
+                        existingSong.SongUrl = songname3;
+                        existingSong.AlbumId = s.AlbumId;
+
+                    }
+                    else if (s.SongImageUrl == null && s.SongImageUrl == null)
+                    {
+                        // Mevcut kaydı güncelle
+                        existingSong.SongName = s.SongName;
+                        existingSong.SongImageUrl =s.ImageUrl;
+                        existingSong.SongUrl = s.SongFileUrl;
+                        existingSong.AlbumId = s.AlbumId;
+
+                    }
+                    _songService.TUpdate(existingSong);
+
+                }
+
+                return RedirectToAction("Index");
+            }
+
+            return View();
+
         }
     }
 }

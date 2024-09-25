@@ -28,6 +28,6 @@ namespace OneMusic.DataAccessLayer.Context
         public DbSet<Singer> Singers { get; set; }
         public DbSet<Song> Songs { get; set; }
         public DbSet <Category> Categories { get; set; }
-
+        public DbSet<Event> Events { get; set; }
     }
 }

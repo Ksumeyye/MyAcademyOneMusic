@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using OneMusic.BusinessLayer.Abstract;
 using OneMusic.BusinessLayer.Validators;
+using OneMusic.DataAccessLayer.Context;
 using OneMusic.EntityLayer.Entities;
 
 namespace OneMusic.WebUI.Controllers
@@ -10,17 +12,20 @@ namespace OneMusic.WebUI.Controllers
     public class AdminSingerController : Controller
     {
         private readonly ISingerService _singerService;
+        private readonly OneMusicContext _oneMusicContext;
 
-        public AdminSingerController(ISingerService singerService)
+        public AdminSingerController(ISingerService singerService, OneMusicContext oneMusicContext)
         {
             _singerService = singerService;
+            _oneMusicContext = oneMusicContext;
         }
 
         public IActionResult Index()
         {
-            var values = _singerService.TGetList();
+            var values = (from user in _oneMusicContext.Users join userRole in _oneMusicContext.UserRoles on user.Id equals userRole.UserId where userRole.RoleId==2 select user).ToList();
             return View(values);
         }
+        [HttpGet]
         public IActionResult DeleteSinger(int id)
         {
             _singerService.TDelete(id);
