@@ -12,8 +12,10 @@
 
     <tr>
         <th>#</th>
+        <th>Şarkı Kapak Resmi</th>
         <th>Şarkı Adı</th>
         <th>Albüm Adı</th>
+        <th>Oynat</th>
         <th>İşlemler</th>
     </tr>
 
@@ -22,9 +24,14 @@
         count++;
         <tr>
             <th>@count</th>
+            <td>  <img src="/images/@item.SongImageUrl" style="height:75px;width:75px" />  </td>
             <td>@item.SongName</td>
             <td>@item.Album.AlbumName</td>
-            
+            <td>
+                <audio preload="auto" controls>
+                    <source src="/songs/@item.SongUrl">
+                </audio>
+            </td>
             <td>
                 <button class="btn btn-outline-danger" onclick="deleteMySong(@item.SongId)">Sil</button>
                 <a class="btn btn-outline-info" asp-action="UpdateSong" asp-route-id="@item.SongId">Güncelle</a>

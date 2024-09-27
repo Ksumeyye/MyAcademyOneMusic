@@ -45,10 +45,10 @@ namespace OneMusic.WebUI.Controllers
             ViewBag.CategoryList = categoryList;
 
             var artists = await _userManager.GetUsersInRoleAsync("Artist");
-            ViewBag.Singers = artists.Select(s => new SelectListItem
+            ViewBag.Singers = artists.Select(b => new SelectListItem
             {
-                Value = s.Id.ToString(),
-                Text = $"{s.Name} {s.Surname}"
+                Value = b.Id.ToString(),
+                Text = $"{b.Name} {b.Surname}"
             }).ToList();
             return View();
         }
@@ -69,12 +69,12 @@ namespace OneMusic.WebUI.Controllers
             }).ToList();
             ViewBag.CategoryList = categoryList;
             var values = _albumService.TGetById(id);
-
+            //Sanatçıları viewbagin içine koydum
             var artists = await _userManager.GetUsersInRoleAsync("Artist");
-            ViewBag.SingerId = artists.Select(s => new SelectListItem
+            ViewBag.SingerId = artists.Select(b => new SelectListItem
             {
-                Value = s.Id.ToString(),
-                Text = $"{s.Name} {s.Surname}"
+                Value = b.Id.ToString(),
+                Text = $"{b.Name} {b.Surname}"
             }).ToList();
             return View(values);
         }
@@ -98,7 +98,7 @@ namespace OneMusic.WebUI.Controllers
         }
         [HttpGet]
         public async Task<IActionResult> GetSongsByAlbumId(int albumId)
-        {
+        { //Album ıd'e göre şarkı getirdim
             var songs = _songService.TGetSongsByAlbumId(albumId);
             var model = new AlbumsByArtistViewModel
             {

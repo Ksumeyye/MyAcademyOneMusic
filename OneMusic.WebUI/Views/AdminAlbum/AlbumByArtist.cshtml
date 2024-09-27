@@ -1,0 +1,29 @@
+﻿@model OneMusic.WebUI.Controllers.AlbumsByArtistViewModel
+@{
+    ViewData["Title"] = "AlbumByArtist";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<h3>Albumler</h3>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Albüm Resmi</th>
+            <th>Albümün İsmi</th>
+            <th>Şarkılara Git</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i=0; i<Model.Albums.Count; i++)
+        {
+            <tr>
+                <td>@(i+1)</td>
+                <td><img src="@Model.Albums[i].CoverImage" alt="Albüm Resmi" style="height:50px; width:50px"/></td>
+                <td>@Model.Albums[i].AlbumName</td>
+                <td><a href="/AdminAlbum/GetSongsByAlbumId?albumId=@Model.Albums[i].AlbumId" class="btn btn-outline-info">Şarkıları Gör</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

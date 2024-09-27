@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Modernize Free</title>
+    <title>Şarkıcı Paneli</title>
     <link rel="shortcut icon" type="image/png" href="~/Modernize-1.0.0/src/assets/images/logos/favicon.png" />
     <link rel="stylesheet" href="~/Modernize-1.0.0/src/assets/css/styles.min.css" />
 </head>
@@ -46,11 +46,35 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
+                            <a class="sidebar-link" href="/Artist/Profile/Index" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-user-circle"></i>
+                                </span>
+                                <span class="hide-menu">Profilim</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
                             <a class="sidebar-link" href="/Artist/MyAlbum/Index" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-wand"></i>
                                 </span>
                                 <span class="hide-menu">Albümlerim</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/Artist/MySong/Index" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-microphone-2"></i>
+                                </span>
+                                <span class="hide-menu">Şarkılarım</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/Login/LogOut" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-door-exit"></i>
+                                </span>
+                                <span class="hide-menu">Çıkış</span>
                             </a>
                         </li>
                     </ul>
@@ -101,7 +125,7 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                                     <div class="message-body">
-                                        <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                                        <a href="/Artist/Profile/Index" class="d-flex align-items-center gap-2 dropdown-item">
                                             <i class="ti ti-user fs-6"></i>
                                             <p class="mb-0 fs-3">Profilim</p>
                                         </a>
@@ -109,7 +133,7 @@
                                             <i class="ti ti-mail fs-6"></i>
                                             <p class="mb-0 fs-3">Ayarlar</p>
                                         </a>
-                                        <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Çıkış Yap</a>
+                                        <a href="/Login/LogOut" class="btn btn-outline-primary mx-3 mt-2 d-block">Çıkış Yap</a>
                                     </div>
                                 </div>
                             </li>
