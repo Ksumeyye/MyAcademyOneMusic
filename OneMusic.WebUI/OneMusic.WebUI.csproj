@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <Folder Include="Areas\Artist\Data\" />
+    <Folder Include="Views\Shared\Components\_DefaultAlbumSongSaleComponent\" />
     <Folder Include="wwwroot\images\" />
     <Folder Include="wwwroot\songs\" />
   </ItemGroup>
