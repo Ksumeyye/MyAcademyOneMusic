@@ -1,0 +1,87 @@
+﻿﻿
+@model List<Album>
+
+<style>
+    .pagination-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .page-item {
+        margin: 0 5px;
+    }
+
+    .page-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .page-link:hover {
+            background-color: #e9ecef;
+        }
+
+    .page-item.active .page-link {
+        background-color: #007bff;
+        color: #fff;
+        border-color: #007bff;
+    }
+
+    .page-item.disabled .page-link {
+        color: #6c757d;
+        pointer-events: none;
+        background-color: #fff;
+        border-color: #dee2e6;
+    }
+
+</style>
+
+<div class="oneMusic-buy-now-area mb-100">
+    <div class="container">
+        <h2>En Son Albümler</h2>
+        <h4>Son eklenen albümleri ve albümlerin ilk parçalarını aşağıda bulabilirsiniz.</h4>
+        <br/> 
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="single-album-area">
+                        <div class="album-thumb">
+                            <img style="width:250px; height:200px;" src="@item.CoverImage" alt="">
+                            <div class="album-price">
+                                <p>@item.Price.ToString("n2") ₺</p>
+                            </div>
+            <div>
+                <audio preload="auto" controls>
+                    <source src="/songs/@item.Songs.FirstOrDefault()?.SongUrl">
+                </audio>
+            </div>
+        </div>
+        <div class="album-info">
+            <a href="#">
+                <h5>@item.AlbumName</h5>
+            </a>
+            <p>@item.AppUser.Name @item.AppUser.Surname</p>
+        </div>
+    </div>
+    </div>
+    }
+</div>
+<br/>
+<div class="row">
+    <div class="col-12">
+        <div class="load-more-btn text-center">
+            <a href="#" class="btn oneMusic-btn">Daha Fazla Yükle <i class="fa fa-angle-double-right"></i></a>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
