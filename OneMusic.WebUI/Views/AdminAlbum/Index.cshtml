@@ -13,6 +13,7 @@
     <tr>
         <th>#</th>
         <th>Resim</th>
+        <th>Şarkıcı</th>
         <th>Albüm Adı</th>
         <th>Fiyat</th>
         <th>İşlemler</th>
@@ -24,6 +25,7 @@
         <tr>
             <th>@count</th>
             <td><img src="@item.CoverImage" style="height:50px; width:50px" /></td>
+            <td>@item.AppUser.Name @item.AppUser.Surname</td>
             <td>@item.AlbumName</td>
             <td>@item.Price ₺</td>
             <td>

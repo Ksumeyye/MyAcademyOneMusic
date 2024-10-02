@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using OneMusic.BusinessLayer.Abstract;
 using OneMusic.BusinessLayer.Validators;
 using OneMusic.DataAccessLayer.Context;
@@ -25,7 +24,6 @@ namespace OneMusic.WebUI.Controllers
             var values = (from user in _oneMusicContext.Users join userRole in _oneMusicContext.UserRoles on user.Id equals userRole.UserId where userRole.RoleId==2 select user).ToList();
             return View(values);
         }
-        [HttpGet]
         public IActionResult DeleteSinger(int id)
         {
             _singerService.TDelete(id);

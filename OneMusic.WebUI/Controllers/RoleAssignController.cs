@@ -47,7 +47,7 @@ namespace OneMusic.WebUI.Controllers
 		}
 
 		[HttpPost]
-		public async Task<IActionResult> AssignRole(List<RoleAssignViewModel> model) // kullanıcının birden fazla rolü olabilir o nedenle liste türünde döncek
+		public async Task<IActionResult> AssignRole(List<RoleAssignViewModel> model) // kullanıcının birden fazla rolü olabilir o yüzden liste türünde döncek
 		{
 			int userid = (int)TempData["userid"];
 

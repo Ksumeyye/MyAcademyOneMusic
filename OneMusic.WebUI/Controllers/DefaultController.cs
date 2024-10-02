@@ -6,7 +6,7 @@ using OneMusic.EntityLayer.Entities;
 namespace OneMusic.WebUI.Controllers
 {
     [AllowAnonymous]
-    public class DefaultController(IMessageService _messageService) : Controller
+    public class DefaultController(IMessageService _messageService,IAlbumService _albumService) : Controller
     {
         public IActionResult Index()
         {

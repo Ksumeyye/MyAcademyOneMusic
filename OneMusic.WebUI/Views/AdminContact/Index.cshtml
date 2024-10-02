@@ -20,10 +20,10 @@
         count++;
         <tr>
             <td>@count</td>
-            <td>@item.Address.Substring(0,25)</td>
+            <td>@(item.Address.Length >25?item.Address.Substring(0, 25) : item.Address)</td> <!--Bu kod, item.Address 25 karakterden uzun ise ilk 25 karakteri alır; aksi takdirde tüm adresi gösterir.-->
             <td>@item.Email</td>
             <td>@item.Phone</td>
-            <td>@item.MapUrl.Substring(0,20)</td>
+            <td>@(item.MapUrl.Length >20?item.MapUrl.Substring(0,20) : item.MapUrl)</td>
             <td class="text-center">
                 <a class="btn btn-outline-danger" asp-action="DeleteContact" asp-route-id="@item.ContactId">Sil</a>
                 <a class="btn btn-outline-info" asp-action="UpdateContact" asp-route-id="@item.ContactId">Güncelle</a>

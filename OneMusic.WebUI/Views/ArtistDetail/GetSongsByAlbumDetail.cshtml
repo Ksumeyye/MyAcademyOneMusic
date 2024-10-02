@@ -1,0 +1,122 @@
+﻿@model OneMusic.WebUI.Controllers.AlbumsByArtistDetailViewModel
+@{
+    ViewData["Title"] = $"{Model.album.AlbumName} Albümünün İçindekiler";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>One Music</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="~/one-music-gh-pages/img/core-img/favicon.ico">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="~/one-music-gh-pages/style.css">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ##### Breadcumb Area Start ##### -->
+    <section class="breadcumb-area bg-img bg-overlay" style="background-image: url(/one-music-gh-pages/img/bg-img/breadcumb3.jpg);">
+        <div class="bradcumbContent">
+            <p>Albüm Hakkında</p>
+            <h2>@ViewData["Title"]</h2>
+        </div>
+    </section>
+    <style>
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .page-item {
+            margin: 0 5px;
+        }
+
+        .page-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+            .page-link:hover {
+                background-color: #e9ecef;
+            }
+
+        .page-item.active .page-link {
+            background-color: #007bff;
+            color: #fff;
+            border-color: #007bff;
+        }
+
+        .page-item.disabled .page-link {
+            color: #6c757d;
+            pointer-events: none;
+            background-color: #fff;
+            border-color: #dee2e6;
+        }
+    </style>
+    <br />
+    <div class="oneMusic-buy-now-area mb-100">
+        <div class="container">
+            <h2>@ViewData["Title"]</h2>
+            <h4>Şarkıcnın  albümüne ait şarkıları aşağıdan dinleyebilirsiniz</h4>
+            <br /> <br />
+            <div class="one-music-songs-area mb-70">
+                <div class="container">
+                    <br />
+                    <div class="row">
+                        @for (int i = 0; i < Model.Songs.Count; i++)
+                        {
+                            <!-- Single Song Area -->
+                            <div class="col-12">
+                                <div class="single-song-area mb-30 d-flex flex-wrap align-items-end">
+                                    <div class="song-thumbnail">
+                                        <img style="width:140px;height:120px;" src="/images/@Model.Songs[i].SongImageUrl" alt="">
+                                    </div>
+                                    <div class="song-play-area">
+                                        <div class="song-name">
+                                            <p>@Model.Songs[i].SongName</p>
+                                        </div>
+                                        <audio preload="auto" controls>
+                                            <source src="/songs/@Model.Songs[i].SongUrl">
+                                        </audio>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <br /> 
+        </div>
+    </div>
+</body>
+
+</html>
+
+
