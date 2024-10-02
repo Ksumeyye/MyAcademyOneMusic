@@ -1,0 +1,27 @@
+﻿@model List<Song>
+<div class="one-music-songs-area mb-70">
+    <div class="container">
+        <h2>En Çok Dinlenenler</h2>
+        <br/>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-12">
+                    <div class="single-song-area mb-30 d-flex flex-wrap align-items-end">
+                        <div class="song-thumbnail">
+                            <img style="width:140px;height:120px;" src="/images/@item.SongImageUrl" alt="">
+                            </div>
+                            <div class="song-play-area">
+                                <div class="song-name">
+                                    <p>@item.SongName</p>
+                                </div>
+                                <audio preload="auto" controls>
+                                    <source src="/songs/@item.SongUrl">
+                                </audio>
+                            </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

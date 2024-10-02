@@ -1,0 +1,31 @@
+﻿@model List<AppUser>
+<style>
+    .container-height
+    {
+        height:810px;
+        overflow:hidden;
+    }
+    .popular-artists-area
+    {
+        height:100px;
+        overflow:hidden;
+    }
+</style>
+<div class="col-12 col-lg-4 container-height">
+    <div class="popular-artists-area mb-100">
+        <div class="section-heading text-left mb-50 wow fadeInUp" data-wow-delay="50ms">
+            <h2>En Çok Tercih Edilen Şarkıcılar</h2>
+        </div>
+        @foreach (var item in Model)
+        {
+            <div class="single-artists d-flex align-items-center wow fadeInUp" data-wow-delay="100ms">
+                <div class="thumbnail">
+                    <a href="/ArtistDetail/AlbumByArtistDetail?artistId=@item.Id"> <img style="width:50px; height:50px;" src="@item.ImageUrl" alt=""></a>
+                    </div>
+                <div class="content-">
+                    <a href="/ArtistDetail/albumByArtistDetail?artistId=@item.Id"><p>@item.Name @item.Surname</p></a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

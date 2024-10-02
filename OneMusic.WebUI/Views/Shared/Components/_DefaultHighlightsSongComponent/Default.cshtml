@@ -1,0 +1,37 @@
+﻿@model List<Song>
+<section class="highlights-area section-padding-100-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="new-hits-area mb-100">
+                    <div class="section-heading text-left mb-50 ti-world-www fadeInUp" data-wow-delay="50ms">
+                        <p>Yenilikleri Gör</p>
+                        <h2>En Hit Albümler</h2>
+                    </div>
+                    @foreach (var item in Model)
+                    {
+                        <div class="single-new-item d-flex align-items-center justify-content-between ti-world-www fadeInUp" data-wow-delay="100ms">
+                            <div class="first-part d-flex align-items-center">
+                                <div class="thumbnail">
+                                    <a href="/ArtistDetail/GetSongsByAlbumDetail?albumId=@item.AlbumId"><img style="width:75px; height:75px;" src="@item.Album.CoverImage" alt=""></a>
+                                    </div>
+                                    <div class="content-">
+                                        <a href="/ArtistDetail/GetSongsByAlbumDetail?albumId=@item.AlbumId"><h6>@item.Album.AlbumName</h6></a>
+                                        <p>En çok dinlenen: <b>@item.SongName</b></p>
+                                        <p>@item.Album.AppUser.Name @item.Album.AppUser.Surname</p>
+                                        </div>
+                                        </div>
+                                        <audio preload="auto" controls>
+                                            <source src="/songs/@item.SongUrl" >
+                                        </audio>
+                        </div>
+                    }
+            </div>
+        </div>
+            <!--New Hits Songs-->
+        @await Component.InvokeAsync("_DefaultNewHitSongsComponent")
+            <!--Popular Artists-->
+        @await Component.InvokeAsync("_DefaultTopSingersComponent")
+    </div>
+    </div>
+</section>

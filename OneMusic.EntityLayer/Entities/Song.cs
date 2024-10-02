@@ -14,6 +14,7 @@ namespace OneMusic.EntityLayer.Entities
         public string? SongImageUrl { get; set; }
         public int AlbumId { get; set; }
         public Album Album { get; set; }
-        
+        public double? SongValue { get; set; }
+
     }
 }

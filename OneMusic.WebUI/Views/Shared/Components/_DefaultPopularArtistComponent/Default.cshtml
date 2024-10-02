@@ -1,0 +1,32 @@
+﻿@model List<Song>
+<section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-fixed" style="background-image:url(/one-music-gh-pages/img/bg-img/bg-4.jpg);">
+    <div class="container">
+        @foreach (var item in Model)
+        {
+            <div class="row align-items-end">
+                <div class="col-12 col-md-5 col-lg-4">
+                    <div class="featured-artist-thumb">
+                        <img src="/images/@item.SongImageUrl" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 col-lg-8">
+                    <div class="featured-artist-content">
+                        <div class="section-heading white text-left mb-30">
+                            <p>Öne Çıkan Albüm: 30</p>
+                            <h2>Albümün en iyisi: Easy On Me</h2>
+                        </div>
+                        <p>" Easy on Me ", İngiliz şarkıcı Adele'in dördüncü stüdyo albümü 30'dan bir şarkıdır. Çıktığı o günden bu yana milyonlar dinlemiştir. </p>
+                        <div class="song-play-area">
+                            <div class="song-name">
+                                <p>En en en sevilen</p>
+                            </div>
+                            <audio preload="auto"controls>
+                                <source src="/songs/@item.SongUrl">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>

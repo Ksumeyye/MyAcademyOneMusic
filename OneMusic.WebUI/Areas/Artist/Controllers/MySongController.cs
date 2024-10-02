@@ -9,7 +9,7 @@ using OneMusic.WebUI.Areas.Artist.Models;
 
 namespace OneMusic.WebUI.Areas.Artist.Controllers
 {
-    [Area("Artist")]
+    [Area("Artist")] //artist controller
     [Authorize(Roles = "Artist")] // Sadece rolü artist olan kişiler bu controller'a erişebilir. 
     [Route("[area]/[controller]/[action]/{id?}")] //burası bir area içerisinde olduğu için area içerisindeki controllerlara bu route 'ı belirtiriz
     public class MySongController : Controller
@@ -48,7 +48,7 @@ namespace OneMusic.WebUI.Areas.Artist.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> CreateSong(SongViewModel s)
+        public async Task<IActionResult> CreateSong(SongViewModel s)  //viewmodelden çağırmamızın sebebi burda songfile diye bir custom property tutmamdır.
         {
             if (s.SongImageUrl != null && s.SongFile != null)
             {
@@ -131,28 +131,28 @@ namespace OneMusic.WebUI.Areas.Artist.Controllers
                 {
                     if (s.SongImageUrl != null)
                     {
-                        var resource1 = Directory.GetCurrentDirectory();
-                        var extension1 = Path.GetExtension(s.SongImageUrl.FileName);
-                        var imagename1 = ($"{Guid.NewGuid()}{extension1}");
-                        var savelocation1 = ($"{resource1}/wwwroot/images/{imagename1}");
-                        var stream1 = new FileStream(savelocation1, FileMode.Create);
-                        await s.SongImageUrl.CopyToAsync(stream1);
+                        var resource2 = Directory.GetCurrentDirectory();
+                        var extension2 = Path.GetExtension(s.SongImageUrl.FileName);
+                        var imagename2 = ($"{Guid.NewGuid()}{extension2}");
+                        var savelocation2 = ($"{resource2}/wwwroot/images/{imagename2}");
+                        var stream2 = new FileStream(savelocation2, FileMode.Create);
+                        await s.SongImageUrl.CopyToAsync(stream2);
                         // Mevcut kaydı güncelle
                         existingSong.SongName = s.SongName;
-                        existingSong.SongImageUrl = imagename1;
+                        existingSong.SongImageUrl = imagename2;
                         existingSong.AlbumId = s.AlbumId;
                     }
                     else if (s.SongFile != null)
                     {
-                        var resource2 = Directory.GetCurrentDirectory();
-                        var extension2 = Path.GetExtension(s.SongFile.FileName);
-                        var songname2 = ($"{Guid.NewGuid()}{extension2}");
-                        var savelocation2 = ($"{resource2}/wwwroot/audio/{songname2}");
-                        var stream2 = new FileStream(savelocation2, FileMode.Create);
-                        await s.SongFile.CopyToAsync(stream2);
+                        var resource3 = Directory.GetCurrentDirectory();
+                        var extension3 = Path.GetExtension(s.SongFile.FileName);
+                        var songname3 = ($"{Guid.NewGuid()}{extension3}");
+                        var savelocation3 = ($"{resource3}/wwwroot/audio/{songname3}");
+                        var stream3 = new FileStream(savelocation3, FileMode.Create);
+                        await s.SongFile.CopyToAsync(stream3);
                         // Mevcut kaydı güncelle
                         existingSong.SongName = s.SongName;
-                        existingSong.SongUrl = songname2;
+                        existingSong.SongUrl = songname3;
                         existingSong.AlbumId = s.AlbumId;
 
                     }
