@@ -1,0 +1,15 @@
+﻿@model AppRole
+@{
+    ViewData["Title"] = "UpdateRole";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>Rol Güncelleme Formu</h3>
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    <label>Rol Adı</label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+    <button class="btn btn-outline-primary">Güncelle</button>
+</form>
