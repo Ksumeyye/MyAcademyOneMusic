@@ -81,14 +81,17 @@
         }
     </style>
     <br />
+    <br />
+    <br />
     <div class="oneMusic-buy-now-area mb-100">
         <div class="container">
             <h2>@ViewData["Title"]</h2>
-            <h4>Şarkıcnın  albümüne ait şarkıları aşağıdan dinleyebilirsiniz</h4>
+            <h4>Şarkıcnın albümüne ait şarkıları aşağıdan dinleyebilirsiniz</h4>
             <br /> <br />
             <div class="one-music-songs-area mb-70">
                 <div class="container">
-                    <br />
+                    @*                     <h2>@ViewData["Title"]</h2>
+                    *@    <br />
                     <div class="row">
                         @for (int i = 0; i < Model.Songs.Count; i++)
                         {
@@ -115,6 +118,10 @@
             <br /> 
         </div>
     </div>
+
+    <!-- ##### Buy Now Area End ##### -->
+    <!-- ##### Contact Area Start ##### -->
+    <!-- ##### Contact Area End ##### -->
 </body>
 
 </html>

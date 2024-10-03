@@ -48,20 +48,23 @@
     <div class="container">
         <h2>En Son Albümler</h2>
         <h4>Son eklenen albümleri ve albümlerin ilk parçalarını aşağıda bulabilirsiniz.</h4>
-        <br/> 
+        <br /> <br/>
         <div class="row">
             @foreach (var item in Model)
             {
+                <!-- Single Album Area -->
                 <div class="col-12 col-sm-6 col-md-3">
                     <div class="single-album-area">
                         <div class="album-thumb">
                             <img style="width:250px; height:200px;" src="@item.CoverImage" alt="">
+                            <!-- Album Price -->
                             <div class="album-price">
                                 <p>@item.Price.ToString("n2") ₺</p>
                             </div>
+                            <!-- Play Icon -->
             <div>
                 <audio preload="auto" controls>
-                    <source src="/songs/@item.Songs.FirstOrDefault()?.SongUrl">
+                <source src="/songs/@(item.Songs!= null && item.Songs.Any() ? item.Songs.FirstOrDefault()?.SongUrl:"default-url")"> <!--Songs listesinin null olup olmadığını kontrol ettim ve eğer null ise uygun bir yanıt olusturdum-->
                 </audio>
             </div>
         </div>
@@ -75,7 +78,7 @@
     </div>
     }
 </div>
-<br/>
+    <br/> <br/> <br/>
 <div class="row">
     <div class="col-12">
         <div class="load-more-btn text-center">

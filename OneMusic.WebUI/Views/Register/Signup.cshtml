@@ -24,39 +24,37 @@
 					<h3>OneMusic Kayıt Formu</h3>
 					<div class="form-wrapper">
 						<label for="" class="label-input">Ad</label>
-						<input type="text" asp-for="Name" class="form-control" required>
+					<input type="text" class="form-control" asp-for="Name" required>
 					</div>
 					<div class="form-wrapper">
 					<label for="" class="label-input">Soyad</label>
-					<input type="text" asp-for="Surname" class="form-control" required>
+					<input type="text" class="form-control" asp-for="Surname" required>
 					</div>
 					<div class="form-wrapper">
 						<label for="" class="label-input">E-Mail</label>
-					<input type="email" asp-for="Email" class="form-control" required>
+					<input type="email" class="form-control" asp-for="Email" required>
 					</div>
 					<div class="form-wrapper">
 						<label for="" class="label-input">Kullanıcı Adı</label>
-		            <input type="text" asp-for="UserName" class="form-control" required>
+					<input type="text" class="form-control" asp-for="UserName" required>
 					</div>
 					<div class="form-wrapper">
 					<label for="" class="label-input">Şifre</label>
-					<input type="password" asp-for="Password" class="form-control" required>
+					<input type="password" class="form-control" asp-for="Password" required>
 					</div>
 				<div class="form-wrapper">
 					<label for="" class="label-input">Şifre Tekrar</label>
-					<input type="password" asp-for="ConfirnPassword" class="form-control" required>
+					<input type="password" class="form-control" asp-for="ConfirnPassword" required>
 				</div>
 
 				<div style="color:red">
 				@Html.ValidationSummary()	
 				</div>
 
-
-
 					<button>Kayıt Ol</button>
 				</form>
 				<div class="image-holder">
-				<img src="https://r.resimlink.com/yb25JSrX.jpg" style="width:540px;height:460px" alt="">
+				<img src="https://media.timeout.com/images/106090390/750/422/image.jpg" alt="" style="width:540px;height:460px">
 				</div>
 			</div>
 		</div>

@@ -5,7 +5,6 @@
             <div class="col-12 col-lg-4">
                 <div class="new-hits-area mb-100">
                     <div class="section-heading text-left mb-50 ti-world-www fadeInUp" data-wow-delay="50ms">
-                        <p>Yenilikleri Gör</p>
                         <h2>En Hit Albümler</h2>
                     </div>
                     @foreach (var item in Model)
@@ -22,7 +21,7 @@
                                         </div>
                                         </div>
                                         <audio preload="auto" controls>
-                                            <source src="/songs/@item.SongUrl" >
+                                            <source src="/songs/@item.SongUrl">
                                         </audio>
                         </div>
                     }

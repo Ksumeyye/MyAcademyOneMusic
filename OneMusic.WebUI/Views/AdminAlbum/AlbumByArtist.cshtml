@@ -18,11 +18,14 @@
     <tbody>
         @for (int i=0; i<Model.Albums.Count; i++)
         {
+            var album = Model.Albums[i]; // var album= Model.Albums[i] ifadesi, her döngü adımında album adlı bir değişken olusturur. Bu, kodu daha okunabilir hale getirir çünkü her seferinde Model.Albums[i] yazmak yerine sadece album yazmam yeterli olur.
             <tr>
                 <td>@(i+1)</td>
-                <td><img src="@Model.Albums[i].CoverImage" alt="Albüm Resmi" style="height:50px; width:50px"/></td>
-                <td>@Model.Albums[i].AlbumName</td>
-                <td><a href="/AdminAlbum/GetSongsByAlbumId?albumId=@Model.Albums[i].AlbumId" class="btn btn-outline-info">Şarkıları Gör</a></td>
+                <td>
+                    <img src="@album.CoverImage" alt="Albüm Resmi" style="height:50px; width:50px"/>
+                </td>
+                <td>@album.AlbumName</td>
+                <td><a href="/AdminAlbum/GetSongsByAlbumId?albumId=@album.AlbumId" class="btn btn-outline-info">Şarkıları Gör</a></td>
             </tr>
         }
     </tbody>

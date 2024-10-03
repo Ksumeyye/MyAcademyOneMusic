@@ -1,0 +1,27 @@
+﻿@model List<Song>
+
+<section class="album-category section-padding-100-0">
+    <div class="container">
+        <h2>En Son Şarkılar</h2>
+        <br /> <br />
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                var firstChar = item.SongName[0].ToString().ToLower();
+                string filterClass = char.IsDigit(firstChar[0]) ? "number" : firstChar;
+
+                <div class="col-12 col-sm-4 col-md-3 col-lg-2 single-album-item @filterClass">
+                    <div class="single-album">
+                        <img style="width:200px;height:180px;" src="/images/@item.SongImageUrl" alt="">
+                        <div class="album-info">
+                            <a href="#">
+                                <h5>@item.SongName</h5>
+                            </a>
+                            <p>@item.Album.AlbumName</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

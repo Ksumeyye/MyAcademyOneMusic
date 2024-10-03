@@ -42,6 +42,21 @@
             <h2>Şarkıcının Albümleri İle Şarkıları</h2>
         </div>
     </section>
+    <!-- ##### Breadcumb Area End ##### -->
+    <!-- ##### Album Catagory Area Start ##### -->
+    @*     @await Component.InvokeAsync("_DefaultAlbumListComponent") *@
+
+
+    <!-- ##### Album Catagory Area End ##### -->
+    <!-- ##### Buy Now Area Start ##### -->
+    @*   @await Component.InvokeAsync("_DefaultAlbumSongSaleComponent") *@
+
+
+    <!-- ##### Buy Now Area End ##### -->
+    <!-- ##### Song Area Start ##### -->
+    @*  @await Component.InvokeAsync("_DefaultMostListenedToSongs") *@
+
+    <!-- ##### Song Area End ##### -->
     <!-- ##### Contact Area Start ##### -->
     @await Component.InvokeAsync("_DefaultMessageComponent")
     <!-- ##### Contact Area End ##### -->

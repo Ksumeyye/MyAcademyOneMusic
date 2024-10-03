@@ -82,7 +82,7 @@
         }
 
     </style>
-
+    <br />
     <br />
     <div class="oneMusic-buy-now-area mb-100">
         <div class="container">
@@ -92,47 +92,51 @@
             <div class="row">
                 @for (int i = 0; i < Model.Albums.Count; i++)
                 {
+                    var album = Model.Albums[i];
+                    var firstSong = album.Songs.FirstOrDefault();
                     <!-- Single Album Area -->
                     <div class="col-12 col-sm-6 col-md-3">
                         <div class="single-album-area">
                             <div class="album-thumb">
                                 <td>
-                                    <a href="/ArtistDetail/GetSongsByAlbumDetail?albumId=@Model.Albums[i].AlbumId">
-                                        <img src="@Model.Albums[i].CoverImage" alt="Albüm Resmi" />
+                                    <a href="/ArtistDetail/GetSongsByAlbumDetail?albumId=@album.AlbumId">
+                                        <img src="@album.CoverImage" alt="Albüm Resmi" />
                                     </a>
                                 </td>
 
                                 <!-- Album Price -->
                                 <div class="album-price">
-                                    <p>@Model.Albums[i].Price.ToString("n2") ₺</p>
+                                    <p>@album.Price.ToString("n2") ₺</p>
                                 </div>
                                 <!-- Play Icon -->
                                 <div>
+                                    @if (firstSong != null)
+                                    {
 
-                                    <audio preload="auto" controls>
-                                        <source src="/songs/@Model.Albums[i].Songs.FirstOrDefault()?.SongUrl">
-                                    </audio>
-
-
-
+                                        <audio preload="auto" controls>
+                                            <source src="/songs/@firstSong.SongUrl"/>
+                                        </audio>
+                                    }
                                 </div>
                             </div>
                             <div class="album-info">
                                 <a href="#">
-                                    <h5>@Model.Albums[i].AlbumName</h5>
+                                    <h5>@album.AlbumName</h5>
                                 </a>
-                                <p>@Model.Albums[i].AppUser.Name @Model.Albums[i].AppUser.Surname</p>
+                                <p>@album.AppUser.Name @album.AppUser.Surname</p>
                             </div>
                         </div>
                     </div>
                 }
             </div>
-
-
             <br /> <br /> <br />
 
         </div>
     </div>
+    <!-- ##### Buy Now Area End ##### -->
+    <!-- ##### Contact Area Start ##### -->
+    @*     @await Component.InvokeAsync("_DefaultMessageComponent")
+    *@    <!-- ##### Contact Area End ##### -->
 </body>
 </html>
 
