@@ -54,14 +54,15 @@
             {
                 <!-- Single Album Area -->
                 <div class="col-12 col-sm-6 col-md-3">
-                    <div class="single-album-area">
+                    <div class="single-album-area" style="border: 3px solid #000; border-radius: 4px; overflow: hidden;">
                         <div class="album-thumb">
-                            <img style="width:250px; height:200px;" src="@item.CoverImage" alt="">
+                            <img style="width:100%; height:auto;" src="@item.CoverImage" alt="">
+                        
                             <!-- Album Price -->
-                            <div class="album-price">
-                                <p>@item.Price.ToString("n2") ₺</p>
-                            </div>
-                            <!-- Play Icon -->
+                        <div class="album-price" style="padding: 10px; text-align: center;">
+                        <p>@String.Format("{0:n2} ₺", item.Price)</p>
+                        </div>
+                            <!-- Play Icon -->                           
             <div>
                 <audio preload="auto" controls>
                 <source src="/songs/@(item.Songs!= null && item.Songs.Any() ? item.Songs.FirstOrDefault()?.SongUrl:"default-url")"> <!--Songs listesinin null olup olmadığını kontrol ettim ve eğer null ise uygun bir yanıt olusturdum-->
