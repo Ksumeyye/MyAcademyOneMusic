@@ -21,7 +21,10 @@
             <td>@item.Name @item.Surname</td>
             <td>
                 <a href="/Artists/DeleteArtist/@item.Id" class="btn btn-outline-danger">Sil</a>
-                <a href="/AdminAlbum/AlbumsByArtist?artistId=@item.Id" class="btn btn-outline-info"> Albümlerini Gör</a>
+                <a href="@Url.Action("AlbumByArtist","AdminAlbum",new{artistId=item.Id})" class="btn btn-outline-info">Albümlerini Gör</a>
+                <!---Url.Action ile doğru bir URL oluşturmuş oldum.-->
+                <!---AlbumsByArtist eylemi ile AdminAlbum denetleyicisine yönlendirme yaptim.-->
+                <!---artistId parametresi de doğru bir şekilde geçilmiş oldum.-->
             </td>
         </tr>
 

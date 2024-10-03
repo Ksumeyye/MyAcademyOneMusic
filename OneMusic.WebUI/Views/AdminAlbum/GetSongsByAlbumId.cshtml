@@ -18,11 +18,13 @@
         {
             <tr>
                 <td>@(i+1)</td>
-                <td><img src="/images/@Model.Songs[i].SongImageUrl" alt="Şarkı Resmi" style="height:50px; width:50px"/></td>
-                <td>@Model.Songs[i].SongName</td>
+                <td>
+                    <img src="@Url.Content("~/images/"+ Model.Songs[i].SongImageUrl)"alt="Şarkı Resmi" style="height:50px; width:50px"/>
+                </td>
+                <td>@Html.DisplayFor(model=>Model.Songs[i].SongName)</td>
                 <td>
                     <audio preload="auto" controls>
-                        <source src="/songs/@Model.Songs[i].SongUrl">
+                        <source src="@Url.Content("~/songs/"+Model.Songs[i].SongUrl)"type="audio/mpeg">
                     </audio>
                 </td>
             </tr>
