@@ -11,16 +11,16 @@ Bu projede N Katmanlı Mimari, Kullanıcı - Rol İşlemleri (Admin, Şarkıcı 
 
 # Kullanılan Teknolojiler: <br/>
 
-ASP.Net Core 8.0
-MSSQL Server
-Linq Sorgulamaları
-Identity
-Entity Framework Code First
+ASP.Net Core 8.0 <br/>
+MSSQL Server <br/>
+Linq Sorgulamaları <br/>
+Identity <br/>
+Entity Framework Code First <br/>
 LogOut <br/>
 Authorize <br/>
 AllowAnonymous <br/>
 Fluent Validation <br/> 
-Html, Css, Bootstrap
+Html, Css, Bootstrap <br/>
 
 # Projemden Kesitler: 
 
