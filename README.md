@@ -1,7 +1,6 @@
 # One Music Project
 - M & Y Yazılım Eğitim Akademi bünyesindeki Full Stack .Net Core Development Bootcamp'i Erhan Gündüz eğitmenliğinde 3. projem olan "OneMusicProject" projesini tamamladım.
 Bu projede N Katmanlı Mimari, Kullanıcı - Rol İşlemleri (Admin, Şarkıcı ve Ziyaretçi Rolleri), Rollere Göre Erişim Yetkileri, Şarkıcı ve Admin Panelleri, Profil, CRUD İşlemleri, Validasyon Kontrolleri, Albüm Bakma ve Müzik Dinleme, Giriş, Kayıt Olma ve Rol Atama, PC'den klasör olarak resim ve müzik ekleyebilme, Şarkıcıya Göre ALbüm, ALbüme Göre Şarkıları Getirme vardır.
-- Admin de tam yetki vardır. Kendi sayfasına girdikten sonra her şeye erişebilir. Eğitmen kaydı yapabilir, kurslara eğitmen atayabilir, kendi bilgilerini düzenleyebilirler.  Yeni kurs ekleyebilir ve diğer sayfaların crud işlemlerini yapabilirler.
 
 - Şarkıcılar, albümlerini ve şarkılarını kendileri yönetebiliyor. Şarkıcılar kendi albümlerini oluşturup albümlerine şarkılar ekleyebilmekte. Şarkıcılar platforma kayıt olduktan sonra admin tarafından kendilerine rol ataması yapılır. Sonra şarkıcı kendi paneline giriş yapabilir ve albümlerini yönetir. 
 
