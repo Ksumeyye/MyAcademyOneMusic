@@ -42,7 +42,7 @@ Html, Css, Bootstrap <br/>
 ![UI-10](https://github.com/user-attachments/assets/3cdf97a9-2d91-421c-a3cf-14ce893494f9)
 ![UI-11](https://github.com/user-attachments/assets/c36c018c-7e2c-4a03-b58c-41b7fd87c90c)
 
-# Admin Giriş
+# Admin Giriş:
 
 ![Admin-Giris-1](https://github.com/user-attachments/assets/a1384c6e-58ec-4c52-90d6-8ab8650eb2fb)
 
@@ -63,11 +63,11 @@ Html, Css, Bootstrap <br/>
 ![Admin-14](https://github.com/user-attachments/assets/6282fd97-31f1-4194-9600-d747aa2bacb3)
 ![Admin-15](https://github.com/user-attachments/assets/931364cf-f94b-4a80-87b2-4ec2d3bb68ec)
 
-# Kullanıcı Kayıt
+# Kullanıcı Kayıt:
 
 ![Kayıt-1](https://github.com/user-attachments/assets/96f67438-a9fe-41fb-82ea-5fee836f004f)
 
-# Şarkıcı Giriş
+# Şarkıcı Giriş:
 
 ![Sarkici-Giris-1](https://github.com/user-attachments/assets/6a0c305e-c0a0-491c-9008-65aa67d7f32d)
 
@@ -79,7 +79,7 @@ Html, Css, Bootstrap <br/>
 ![Sarkici-5](https://github.com/user-attachments/assets/6dfc85c4-f980-46d7-ab5a-450fe6d2d959)
 ![Sarkici-6](https://github.com/user-attachments/assets/30cc6b20-14c5-4703-a98c-ec34257ac210)
 
-# Hata Mesajı
+# Hata Sayfası:
 
 ![Hata-Mesaji-1](https://github.com/user-attachments/assets/0a306792-bd0e-45ca-811a-7668945de4a3)
 
