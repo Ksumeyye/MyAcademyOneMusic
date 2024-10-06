@@ -8,7 +8,7 @@ Bu projede N Katmanlı Mimari, Kullanıcı - Rol İşlemleri (Admin, Şarkıcı 
 
 - Dinleyiciler, En çok dinlenen şarkıdan, en çok dinlenen albüme. En hit şarkılardan en çok beğenilen şarkıcılara kadar bir çok alanı görüntüleyip beğendiği şarkıyı dinlerken admine mesaj gönderebilmektedir Aynı zamanda kolaylıkla istediği şarkıcının albümlerini filtreleyerek ulaşabilmektedir. 
 
-# Kullanılan Katmanlar <br/>
+# Kullanılan Katmanlar: <br/>
  OneMusic.BusinessLayer  <br/>
  OneMusic.DataAccessLayer  <br/>
  OneMusic.EntityLayer  <br/>
