@@ -29,45 +29,57 @@ Html, Css, Bootstrap <br/>
 # Projemden Kesitler: 
 
 # UI Kısmı:
-![UI-1](https://github.com/user-attachments/assets/72da6af6-3434-4be8-bd06-a144b3a89e16)
-![UI-2](https://github.com/user-attachments/assets/fb927337-a595-4ca5-9f10-d6e1ffb6a79e)
-![UI-3](https://github.com/user-attachments/assets/33d4d641-d6ee-4db9-8adb-f3fa4d634043)
-![UI-4](https://github.com/user-attachments/assets/6b3166aa-bf82-4188-86bf-aaf6359e8f21)
-![UI-5](https://github.com/user-attachments/assets/2533ab1e-41a1-4075-bdb5-abf2c6d2f75c)
-![UI-6](https://github.com/user-attachments/assets/46dfd098-68eb-4cc7-b118-fb8ca395aff6)
-![UI-7](https://github.com/user-attachments/assets/db840c5a-c067-40eb-ac78-26dba282c064)
-![UI-8](https://github.com/user-attachments/assets/a70dd919-15a5-4ac8-b1ee-04ea8978c53e)
-![UI-9](https://github.com/user-attachments/assets/a0839480-33b6-4478-a405-55a88f37ccfd)
 
-# Kullanıcı Giriş
-![Kullanıcı-Giris-8](https://github.com/user-attachments/assets/01d3ea67-5bd4-4e3b-918c-1d6e2e950a21)
+![UI-1](https://github.com/user-attachments/assets/4af60c27-d6a6-4f9e-9aed-a91c4e64a6a4)
+![UI-2](https://github.com/user-attachments/assets/6333dbfa-a2dd-47aa-9e34-5cd3e95a375c)
+![UI-3](https://github.com/user-attachments/assets/08c7c93a-702c-4d20-ab5f-cbad61bd05d8)
+![UI-4](https://github.com/user-attachments/assets/bd9a12ec-3914-4457-ac87-eb9b7965d170)
+![UI-5](https://github.com/user-attachments/assets/503359cf-fb15-45d1-98d6-1a31a19f03ce)
+![UI-6](https://github.com/user-attachments/assets/5d7fd751-b17e-44df-9076-0a574794e666)
+![UI-7](https://github.com/user-attachments/assets/63d2a196-c900-43b3-a79d-3a4d725dfcad)
+![UI-8](https://github.com/user-attachments/assets/97aaaac3-51f0-4c06-8a1a-193f7bdf1e7e)
+![UI-9](https://github.com/user-attachments/assets/eaf34a79-395f-40d3-848d-664eab4390a9)
+![UI-10](https://github.com/user-attachments/assets/3cdf97a9-2d91-421c-a3cf-14ce893494f9)
+![UI-11](https://github.com/user-attachments/assets/c36c018c-7e2c-4a03-b58c-41b7fd87c90c)
+
+# Admin Giriş
+
+![Admin-Giris-1](https://github.com/user-attachments/assets/a1384c6e-58ec-4c52-90d6-8ab8650eb2fb)
 
 # Admin Tarafı:
-![AdminPanel-9](https://github.com/user-attachments/assets/1090bc06-bc9f-4f85-8134-ab77cbae0f14)
-![Admin-10](https://github.com/user-attachments/assets/7921d2fc-078c-4776-8118-85ae7d7e587e)
-![Admin-11](https://github.com/user-attachments/assets/76c9f4e3-b5c2-4d23-ac04-aeab48039c56)
-![Admin-12](https://github.com/user-attachments/assets/0a46e781-7a4a-466f-a18c-ba2ba2c22e86)
-![Admin-13](https://github.com/user-attachments/assets/3fc19b07-9504-4df8-a207-1e94ebcc959b)
-![Admin-14](https://github.com/user-attachments/assets/b8598e17-b04e-4be9-8c63-1ed1dc8a7840)
-![Admin-15](https://github.com/user-attachments/assets/67d3ac28-66ac-4fb2-842d-cca1a4a5dcea)
-![Admin-16](https://github.com/user-attachments/assets/d42e2fa5-ce50-48f1-b92f-0b5e467989c8)
-![Admin-17](https://github.com/user-attachments/assets/6e6abb52-1965-46f7-97b7-9b4a0648f7c4)
-![Admin-18](https://github.com/user-attachments/assets/34e0ab28-041e-4aaf-99d9-58d11cb4d40d)
-![Admin-19](https://github.com/user-attachments/assets/2905a9ee-139f-4505-ac7c-5ca6746bfcdb)
-![Admin-20](https://github.com/user-attachments/assets/1e5b6836-69f0-4523-8fcc-e6a9dbd0af3f)
-![Admin-21](https://github.com/user-attachments/assets/4a22e8fe-411c-4749-8f42-fd5d11e9d9c3)
-![Admin-22](https://github.com/user-attachments/assets/f645924f-7000-4bae-a0c2-800220944fe0)
-![Admin-23](https://github.com/user-attachments/assets/3f804831-9ffb-48b4-a8cc-ffbfdd4d3edd)
+
+![Admin-2](https://github.com/user-attachments/assets/7b271217-ff32-44ba-8392-53a8e31094d5)
+![Admin-3](https://github.com/user-attachments/assets/b5281fc1-bdab-4782-aa4b-fb4d2bb588a1)
+![Admin-4](https://github.com/user-attachments/assets/2c3bc2a5-6500-47a1-8c1e-9bca705ee89a)
+![Admin-5](https://github.com/user-attachments/assets/d847ada5-ae9e-4595-a4ab-2e07a2e82f26)
+![Admin-6](https://github.com/user-attachments/assets/d76e18c6-cf0c-49c3-a327-27d487bb1f2a)
+![Admin-7](https://github.com/user-attachments/assets/a9759eb9-60fa-4410-98f3-ba78a8459b8d)
+![Admin-8](https://github.com/user-attachments/assets/1e54e69e-0de4-4e19-a51a-9e11f57d28cc)
+![Admin-9](https://github.com/user-attachments/assets/2bc5cf8b-de72-48fe-8f29-67fd0940666b)
+![Admin-10](https://github.com/user-attachments/assets/2bf22caf-904e-4623-90d1-fb7c49c2a19a)
+![Admin-11](https://github.com/user-attachments/assets/e9a728d7-219a-405a-9d3f-6c9f7398f5bb)
+![Admin-12](https://github.com/user-attachments/assets/653cb6a7-39da-42ba-b735-140fb059dd24)
+![Admin-13](https://github.com/user-attachments/assets/defc970a-737f-4348-ba62-b1ff340f207c)
+![Admin-14](https://github.com/user-attachments/assets/6282fd97-31f1-4194-9600-d747aa2bacb3)
+![Admin-15](https://github.com/user-attachments/assets/931364cf-f94b-4a80-87b2-4ec2d3bb68ec)
 
 # Kullanıcı Kayıt
-![Kayıt-24](https://github.com/user-attachments/assets/974f779e-90c8-412f-bfe1-4f04660ef321)
+
+![Kayıt-1](https://github.com/user-attachments/assets/96f67438-a9fe-41fb-82ea-5fee836f004f)
 
 # Şarkıcı Giriş
-![Sarkıcı-25](https://github.com/user-attachments/assets/c172e0ef-d8d3-40af-9731-843aaa038524)
 
-Şarkıcı Tarafı:
-![Sarkici-26](https://github.com/user-attachments/assets/cf47acbb-7140-4096-900d-6930f0d47e68)
-![Sarkici-27](https://github.com/user-attachments/assets/dd8fd0a1-5a63-4a3c-9d84-f7cd8a9c3180)
-![Sarkici-28](https://github.com/user-attachments/assets/5ed4dccb-1053-44e9-a315-cb852ff6ecdb)
-![Sarkici-29](https://github.com/user-attachments/assets/596d5eed-a097-4abf-ab6b-56c3c9e41576)
-![Sarkici-30](https://github.com/user-attachments/assets/ee1499fd-34b4-4169-9ec6-db2c7b3d8c6e)
+![Sarkici-Giris-1](https://github.com/user-attachments/assets/6a0c305e-c0a0-491c-9008-65aa67d7f32d)
+
+# Şarkıcı Tarafı:
+
+![Sarkici-2](https://github.com/user-attachments/assets/65c78df7-2ec2-43c7-9582-af857f49f0fe)
+![Sarkici-3](https://github.com/user-attachments/assets/293d9889-a911-462f-9d03-7e5d3b449f8f)
+![Sarkici-4](https://github.com/user-attachments/assets/7ec94ffe-52e5-4d72-a756-7af0112b2b58)
+![Sarkici-5](https://github.com/user-attachments/assets/6dfc85c4-f980-46d7-ab5a-450fe6d2d959)
+![Sarkici-6](https://github.com/user-attachments/assets/30cc6b20-14c5-4703-a98c-ec34257ac210)
+
+# Hata Mesajı
+
+![Hata-Mesaji-1](https://github.com/user-attachments/assets/0a306792-bd0e-45ca-811a-7668945de4a3)
+
