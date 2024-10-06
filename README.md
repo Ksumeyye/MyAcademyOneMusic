@@ -1,12 +1,12 @@
 # One Music Project
 - M & Y Yazılım Eğitim Akademi bünyesindeki Full Stack .Net Core Development Bootcamp'i Erhan Gündüz eğitmenliğinde 3. projem olan "OneMusicProject" projesini tamamladım.
-Bu projede N Katmanlı Mimari, Kullanıcı - Rol İşlemleri (Admin, Şarkıcı ve Ziyaretçi Rolleri), Rollere Göre Erişim Yetkileri, Şarkıcı ve Admin Panelleri, Profil, CRUD İşlemleri, Albüm Görüntüleme ve Müzik Dinleme, Giriş, Kayıt Olma ve Rol Atama, PC'den dosya ile fotoğraf ve müzik ekleyebilme, Şarkıcının ALbümünü Görüntüleme, ALbümünden de Şarkıları Görüntüleme vardır.
+Bu projede N Katmanlı Mimari, Kullanıcı - Rol İşlemleri (Admin, Şarkıcı ve Ziyaretçi Rolleri), Rollere Göre Erişim Yetkileri, Şarkıcı ve Admin Panelleri, Profil, CRUD İşlemleri, Albüm Görüntüleme ve Müzik Dinleme, Şarkıcı Filtreleme, Kategori Filtreleme, Giriş, Kayıt Olma ve Rol Atama, PC'den dosya ile fotoğraf ve müzik ekleyebilme, Şarkıcının ALbümünü Görüntüleme, ALbümünden de Şarkıları Görüntüleme vardır.
 
 - Şarkıcılar, albümlerini ve şarkılarını kendileri yönetebiliyor. Şarkıcılar kendi albümlerini oluşturup albümlerine şarkılar ekleyebilmekte. Şarkıcılar platforma kayıt olduktan sonra admin tarafından kendilerine rol ataması yapılır. Sonra şarkıcı kendi paneline giriş yapabilir ve albümlerini yönetir. 
 
 - Admin, tam yetkisi vardır. Sayfasına girdikten sonra her şeye erişebilir. Şarkıcılara kolay şekilde kullanılabilirliği sağlamak için ve dinleyicilere keyifli dinleti oluşturmak için tüm sayfaları düzenleyebilmektedir.
 
-- Dinleyiciler, En çok dinlenen şarkıdan, en çok dinlenen albüme. En hit şarkılardan en çok beğenilen şarkıcılara kadar bir çok alanı görüntüleyip beğendiği şarkıyı dinlerken admine mesaj gönderebilmektedir. 
+- Dinleyiciler, En çok dinlenen şarkıdan, en çok dinlenen albüme. En hit şarkılardan en çok beğenilen şarkıcılara kadar bir çok alanı görüntüleyip beğendiği şarkıyı dinlerken admine mesaj gönderebilmektedir Aynı zamanda kolaylıkla istediği şarkıcının albümlerini filtreleyerek ulaşabilmektedir. 
 
 # Kullanılan Katmanlar <br/>
  OneMusic.BusinessLayer  <br/>
