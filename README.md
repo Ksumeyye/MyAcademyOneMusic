@@ -37,7 +37,7 @@ Html, Css, Bootstrap <br/>
 ![UI-5](https://github.com/user-attachments/assets/503359cf-fb15-45d1-98d6-1a31a19f03ce)
 ![UI-6](https://github.com/user-attachments/assets/5d7fd751-b17e-44df-9076-0a574794e666)
 ![UI-7](https://github.com/user-attachments/assets/63d2a196-c900-43b3-a79d-3a4d725dfcad)
-![UI-8](https://github.com/user-attachments/assets/97aaaac3-51f0-4c06-8a1a-193f7bdf1e7e)
+![UI-8](https://github.com/user-attachments/assets/d4f3e5b8-eb9e-46fa-b89e-1f5fb0d85c34)
 ![UI-9](https://github.com/user-attachments/assets/eaf34a79-395f-40d3-848d-664eab4390a9)
 ![UI-10](https://github.com/user-attachments/assets/3cdf97a9-2d91-421c-a3cf-14ce893494f9)
 ![UI-11](https://github.com/user-attachments/assets/c36c018c-7e2c-4a03-b58c-41b7fd87c90c)
