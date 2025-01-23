@@ -7,7 +7,7 @@ M & Y Yazılım Eğitim Akademi bünyesindeki Full Stack .Net Core Development B
 
 ✨ Şarkıcılar, kendi şarkı ve albümlerini yönetebilir. Kendi albümlerini oluşturup albümlerine şarkılar ekleyebilir. Şarkıcılar platforma kayıt olduktan sonra admin tarafından kendilerine rol ataması yapılır.Sonra şarkıcı kendi paneline giriş yapabilir ve albümlerini yönetebilir. <br/>
 ✨ Adminin tam yetkisi vardır. Sayfasına girdikten sonra her şeye erişebilir. Şarkıcılara kolay şekilde kullanılabilirliği sağlamak ve dinleyicilere keyifli dinleti oluşturmak için tüm sayfaları düzenleyebilir. <br/>
-✨  Dinleyiciler en çok dinlenen şarkıdan en çok dinlenen albüme, en hit şarkılardan en çok beğenilen şarkıcılara kadar birçok alanı görüntüleyebilir. Aynı zamanda beğendiği şarkıyı dinlerken de admine mesaj gönderebilir.Ayrıca kolaylıkla istediği şarkıcının albümlerine filtreleyerek ulaşabilir.<br/>
+✨ Dinleyiciler en çok dinlenen şarkıdan en çok dinlenen albüme, en hit şarkılardan en çok beğenilen şarkıcılara kadar birçok alanı görüntüleyebilir. Aynı zamanda beğendiği şarkıyı dinlerken de admine mesaj gönderebilir.Ayrıca kolaylıkla istediği şarkıcının albümlerine filtreleyerek ulaşabilir.<br/>
 
 
 
