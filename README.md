@@ -1,4 +1,4 @@
-# One Music Project <br/>
+# One Music Project<br/>
 
 M & Y Yazılım Eğitim Akademi bünyesindeki Full Stack .Net Core Development Bootcamp'i Erhan Gündüz eğitmenliğinde 3.projem olan "OneMusicProject" projesini tamamladım. <br/>
 ✨ Bu projede N Katmanlı Mimari, Kullanıcı, Şarkıcı ve Admin Panelleri,Rol İşlemleri (Admin, Şarkıcı ve Ziyaretçi Rolleri), Rollere Göre Erişim Yetkileri, Profil, CRUD İşlemleri, Albüm Görüntüleme ve Müzik Dinleme, Şarkıcı Filtreleme, Kategori Filtreleme, Giriş Yapma, Kayıt Olma ve Rol Atama, Bilgisayardan dosya ile fotoğraf ve şarkı ekleyebilme, Şarkıcının albümünü görüntüleme, Albümünden de şarkıları görüntüleme vardır. <br/>
